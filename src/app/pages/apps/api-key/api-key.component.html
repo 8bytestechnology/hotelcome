@@ -1,0 +1,288 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumbs title="Api key" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+<!-- End Breadcrumbs -->
+
+<div class="row">
+    <div class="col-xxl-3 col-md-6">
+        <div class="card card-animate card-height-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="fw-medium text-muted mb-0">Successful conversions</p>
+                        <h2 class="mt-4 fw-semibold"><span class="counter-value" [CountTo]="50" [from]="0"
+                                [duration]="1">0</span></h2>
+                        <p class="mb-0 text-muted">
+                            <span class="badge bg-light text-success mb-0"><i class="ri-arrow-up-line align-middle"></i>
+                                8.24 % </span> 7 last week
+                        </p>
+                    </div>
+                    <div>
+                        <div class="avatar-sm flex-shrink-0">
+                            <span class="avatar-title bg-success-subtle text-success rounded-circle fs-2">
+                                <i class="ph-check-square-offset"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end card body -->
+        </div>
+    </div>
+    <!--end col-->
+    <div class="col-xxl-3 col-md-6">
+        <div class="card card-animate card-height-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="fw-medium text-muted mb-0">Failed conversions</p>
+                        <h2 class="mt-4 fw-semibold"><span class="counter-value" [CountTo]="8" [from]="0"
+                                [duration]="1">0</span></h2>
+                        <p class="mb-0 text-muted">
+                            <span class="badge bg-light text-danger mb-0"><i
+                                    class="ri-arrow-down-line align-middle"></i> 25.87 % </span> 7 last week
+                        </p>
+                    </div>
+                    <div>
+                        <div class="avatar-sm flex-shrink-0">
+                            <span class="avatar-title bg-danger-subtle text-danger rounded-circle fs-2">
+                                <i class="ph-warning"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end card body -->
+        </div>
+    </div>
+    <!--end col-->
+    <div class="col-xxl-3 col-md-6">
+        <div class="card card-height-100">
+            <div class="card-body">
+                <h5 class="card-title mb-3">Developer Plan</h5>
+                <div class="progress animated-progress custom-progress mb-1">
+                    <div class="progress-bar" role="progressbar" style="width: 38%;" aria-valuenow="38"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p class="text-muted mb-2">You used 215 of 2000 of your API</p>
+                <div class="text-end">
+                    <button type="button" class="btn btn-info btn-sm create-btn" (click)="openModal()">Create API
+                        Key</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end col-->
+    <div class="col-xxl-3 col-md-6">
+        <div class="card">
+            <div class="card-body pb-0">
+                <div class="align-items-center d-flex mb-3">
+                    <h4 class="card-title fs-14 mb-0 flex-grow-1">API Key Report</h4>
+                    <div class="flex-shrink-0">
+                        <div dropdown class="dropdown card-header-dropdown">
+                            <a dropdownToggle class="text-reset dropdown-btn" href="javascript:void(0);"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="fw-semibold text-uppercase fs-12">Sort by: </span><span
+                                    class="text-muted">Today<i class="mdi mdi-chevron-down ms-1"></i></span>
+                            </a>
+                            <div *dropdownMenu class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item" href="javascript:void(0);">Today</a>
+                                <a class="dropdown-item" href="javascript:void(0);">Yesterday</a>
+                                <a class="dropdown-item" href="javascript:void(0);">Last 7 Days</a>
+                                <a class="dropdown-item" href="javascript:void(0);">Last 30 Days</a>
+                                <a class="dropdown-item" href="javascript:void(0);">This Month</a>
+                                <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="hours_spent_chart" class="apex-chart">
+                    <apx-chart [series]="hoursSpentChart.series" [chart]="hoursSpentChart.chart"
+                        [dataLabels]="hoursSpentChart.dataLabels" [grid]="hoursSpentChart.grid"
+                        [plotOptions]="hoursSpentChart.plotOptions" [legend]="hoursSpentChart.legend"
+                        [colors]="hoursSpentChart.colors" [xaxis]="hoursSpentChart.xaxis" dir="ltr"></apx-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end row -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card" id="apiKeyList">
+            <div class="card-header d-flex align-items-center">
+                <h5 class="card-title flex-grow-1 mb-0">API Keys</h5>
+                <div class="d-flex gap-1 flex-wrap">
+                    <button class="btn btn-soft-danger" id="remove-actions" (click)="deleteApiKeyModal.show()"><i
+                            class="ri-delete-bin-2-line"></i></button>
+                    <button type="button" class="btn btn-success create-btn" (click)="openModal()"><i
+                            class="ri-add-line align-bottom me-1"></i>Add API Key</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div>
+                    <div class="table-responsive table-card mb-3">
+                        <table class="table align-middle table-nowrap mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th scope="col" style="width: 50px;">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="checkAll" value="option"
+                                                [(ngModel)]="masterSelected" (change)="checkUncheckAll($event)" />
+                                        </div>
+                                    </th>
+                                    <th class="sort d-none"  apisortable="name" (apisort)="onSort($event)" scope="col">Id</th>
+                                    <th class="sort" apisortable="name" (apisort)="onSort($event)" scope="col">Name</th>
+                                    <th class="sort" apisortable="createdBy" (apisort)="onSort($event)" scope="col">
+                                        Created By</th>
+                                    <th class="sort" apisortable="apiKey" (apisort)="onSort($event)" scope="col">API Key
+                                    </th>
+                                    <th class="sort" apisortable="status" (apisort)="onSort($event)" scope="col">Status
+                                    </th>
+                                    <th class="sort" apisortable="createDate" (apisort)="onSort($event)" scope="col">
+                                        Create Date</th>
+                                    <th class="sort" apisortable="expirydate" (apisort)="onSort($event)" scope="col">
+                                        Expiry Date</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="list form-check-all">
+                                <tr *ngFor="let data of apikeydata; let i=index" id="a_{{data.id}}">
+                                    <th scope="row">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="checkAll"
+                                                value="{{data._id}}" [(ngModel)]="data.state"
+                                                (change)="onCheckboxChange($event)">
+                                        </div>
+                                    </th>
+                                    <td class="id" style="display: none;"><a href="javascript:void(0);"
+                                            class="fw-medium link-primary">#VZ001</a></td>
+                                    <td class="name">{{data.name}}</td>
+                                    <td class="createBy">{{data.createdBy}}</td>
+                                    <td class="apikey">
+                                        <input type="text" class="form-control apikey-value" readonlypagination
+                                            value="{{data.apiKey}}" />
+                                    </td>
+                                    <td class="status"><span class="badge"
+                                            [ngClass]="{'badge-soft-danger': data.status === 'Disable','badge-soft-success': data.status === 'Active'}">{{data.status}}</span>
+                                    </td>
+                                    <td class="create_date">{{data.createDate}}</td>
+                                    <td class="expiry_date">{{data.expirydate}}</td>
+                                    <td>
+                                        <div dropdown class="dropdown">
+                                            <button dropdownToggle class="btn btn-soft-secondary btn-sm dropdown"
+                                                type="button">
+                                                <i class="ri-more-fill align-middle"></i>
+                                            </button>
+                                            <ul *dropdownMenu class="dropdown-menu dropdown-menu-end">
+                                                <li><a class="dropdown-item edit-item-btn"
+                                                        (click)="RenameModal(i)">Rename</a></li>
+                                                <li><a class="dropdown-item regenerate-api-btn"
+                                                        (click)="RenameModal(i)">Regenerate Key</a></li>
+                                                <li><a class="dropdown-item disable-btn"
+                                                        href="javascript:void(0);">Disable</a></li>
+                                                <li><a class="dropdown-item remove-item-btn" data-bs-toggle="modal"
+                                                        (click)="confirm(data.id)">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <div id="elmLoader">
+                                    <div class="spinner-border text-primary avatar-sm" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </div>
+                            </tbody>
+                        </table>
+                        <div class="noresult" style="display: none;">
+                            <div class="text-center">
+                                <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop"
+                                    colors="primary:#121331,secondary:#08a88a"
+                                    style="width: 75px; height: 75px;"></lord-icon>
+                                <h5 class="mt-2">Sorry! No Result Found</h5>
+                                <p class="text-muted mb-0">We've searched more than 150+ API Keys We did not find any
+                                    API for you search.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end mt-3">
+                        <pagination class="pagination-wrap hstack gap-2" [totalItems]="(total | async)!"
+                            [(ngModel)]="service.page" [itemsPerPage]="service.pageSize"></pagination>
+                    </div>
+                </div>
+            </div>
+            <!-- end card body -->
+        </div>
+        <!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<!-- Modal -->
+<div bsModal #createApiKeyModal="bs-modal" class="modal fade" id="api-key-modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Create API Key</h5>
+                <button type="button" class="btn-close" id="close-modal" (click)="createApiKeyModal.hide()"></button>
+            </div>
+            <div class="modal-body">
+                <div id="api-key-error-msg" class="alert alert-danger py-2 d-none">Please enter api key name</div>
+                <input type="hidden" id="apikeyId" />
+                <div class="mb-3">
+                    <label for="api-key-name" class="form-label">API Key Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="api-key-name" placeholder="Enter api key name"
+                        [(ngModel)]="apiname" />
+                </div>
+                <div class="mb-3" id="apikey-element" style="display: none;">
+                    <label for="api-key" class="form-label">API Key</label>
+                    <input type="text" class="form-control" id="api-key" [(ngModel)]="apikeyField" disabled
+                        value="b5815DE8A7224438932eb296Z5" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="hstack gap-2 justify-content-end">
+                    <button type="button" class="btn btn-secondary" (click)="createApiKeyModal.hide()">Close</button>
+                    <button type="button" class="btn btn-primary" id="createApi-btn" (click)="createApi()">Create
+                        API</button>
+                    <button type="button" class="btn btn-primary d-none" id="add-btn" (click)="addApi()">Add</button>
+                    <button type="button" class="btn btn-primary d-none" id="edit-btn" (click)="editApi()">Save
+                        Changes</button>
+                </div>
+            </div>
+        </div>
+        <!-- modal content -->
+    </div>
+</div>
+<!-- end modal -->
+
+<!-- Modal -->
+<div bsModal #deleteApiKeyModal="bs-modal" class="modal fade zoomIn" id="deleteApiKeyModal" tabindex="-1"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    id="deleteRecord-close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mt-2 text-center">
+                    <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop"
+                        colors="primary:#f7b84b,secondary:#f06548" style="width: 100px; height: 100px;"></lord-icon>
+                    <div class="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
+                        <h4>Are you sure ?</h4>
+                        <p class="text-muted mx-4 mb-0">Are you sure you want to remove this API Key ?</p>
+                    </div>
+                </div>
+                <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+                    <button type="button" class="btn w-sm btn-light" (click)="deleteApiKeyModal.hide()">Close</button>
+                    <button type="button" class="btn w-sm btn-danger" id="delete-record"
+                        (click)="deleteData(deleteId)">Yes, Delete It!</button>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+</div>
+<!--end modal -->
