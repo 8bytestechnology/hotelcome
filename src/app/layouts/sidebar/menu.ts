@@ -8,23 +8,23 @@ export const MENU: MenuItem[] = [
     },
     {
         id: 2,
-        label: 'MENUITEMS.DASHBOARD.TEXT',
+        label: 'DASHBOARD',
         icon: "bi bi-speedometer2",
         link: '/',
     },
     {
         id: 1,
-        label: 'MENUITEMS.PAGES.TEXT',
+        label: 'PAGES',
         isTitle: true
     },
     {
         id: 3,
-        label: 'MENUITEMS.AUTHENTICATION.TEXT',
+        label: 'AUTHENTICATION',
         icon: "bi bi-person-circle",
         subItems: [
             {
                 id: 4,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.SIGNIN',
+                label: 'SIGNIN',
                 parentId: 3,
                 subItems: [
                     {
@@ -49,7 +49,7 @@ export const MENU: MenuItem[] = [
             },
             {
                 id: 5,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.SIGNUP',
+                label: 'SIGNUP',
                 parentId: 3,
                 subItems: [
                     {
@@ -74,7 +74,7 @@ export const MENU: MenuItem[] = [
             },
             {
                 id: 6,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.PASSWORDRESET',
+                label: 'PASSWORDRESET',
                 parentId: 3,
                 subItems: [
                     {
@@ -99,7 +99,7 @@ export const MENU: MenuItem[] = [
             },
             {
                 id: 7,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.PASSWORDCREATE',
+                label: 'PASSWORDCREATE',
                 parentId: 3,
                 subItems: [
                     {
@@ -124,7 +124,7 @@ export const MENU: MenuItem[] = [
             },
             {
                 id: 8,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.LOCKSCREEN',
+                label: 'LOCKSCREEN',
                 parentId: 3,
                 subItems: [
                     {
@@ -149,7 +149,7 @@ export const MENU: MenuItem[] = [
             },
             {
                 id: 9,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.LOGOUT',
+                label: 'LOGOUT',
                 parentId: 3,
                 subItems: [
                     {
@@ -174,7 +174,7 @@ export const MENU: MenuItem[] = [
             },
             {
                 id: 10,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.SUCCESSMESSAGE',
+                label: 'SUCCESSMESSAGE',
                 parentId: 3,
                 subItems: [
                     {
@@ -199,7 +199,7 @@ export const MENU: MenuItem[] = [
             },
             {
                 id: 11,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.TWOSTEPVERIFICATION',
+                label: 'TWOSTEPVERIFICATION',
                 parentId: 3,
                 subItems: [
                     {
@@ -224,7 +224,7 @@ export const MENU: MenuItem[] = [
             },
             {
                 id: 12,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.ERRORS',
+                label: 'ERRORS',
                 parentId: 3,
                 subItems: [
                     {
@@ -268,13 +268,13 @@ export const MENU: MenuItem[] = [
         subItems: [
             {
                 id: 27,
-                label: 'MENUITEMS.EXTRAPAGES.LIST.STARTER',
+                label: 'STARTER',
                 link: '/pages/starter',
                 parentId: 26
             },
             {
                 id: 28,
-                label: 'MENUITEMS.EXTRAPAGES.LIST.PROFILE',
+                label: 'PROFILE',
                 parentId: 26,
                 subItems: [
                     {
@@ -285,7 +285,7 @@ export const MENU: MenuItem[] = [
                     },
                     {
                         id: 27,
-                        label: 'MENUITEMS.EXTRAPAGES.LIST.SETTINGS',
+                        label: 'SETTINGS',
                         link: '/pages/settings',
                         parentId: 26
                     }
@@ -293,49 +293,49 @@ export const MENU: MenuItem[] = [
             },
             {
                 id: 29,
-                label: 'MENUITEMS.EXTRAPAGES.LIST.TEAM',
+                label: 'TEAM',
                 link: '/pages/team',
                 parentId: 26
             },
             {
                 id: 30,
-                label: 'MENUITEMS.EXTRAPAGES.LIST.TIMELINE',
+                label: 'TIMELINE',
                 link: '/pages/timeline',
                 parentId: 26
             },
             {
                 id: 31,
-                label: 'MENUITEMS.EXTRAPAGES.LIST.FAQS',
+                label: 'FAQS',
                 link: '/pages/faqs',
                 parentId: 26
             },
             {
                 id: 32,
-                label: 'MENUITEMS.EXTRAPAGES.LIST.PRICING',
+                label: 'PRICING',
                 link: '/pages/pricing',
                 parentId: 26
             },
             {
                 id: 33,
-                label: 'MENUITEMS.EXTRAPAGES.LIST.MAINTENANCE',
+                label: 'MAINTENANCE',
                 link: '/pages/maintenance',
                 parentId: 26
             },
             {
                 id: 33,
-                label: 'MENUITEMS.EXTRAPAGES.LIST.COMINGSOON',
+                label: 'COMINGSOON',
                 link: '/pages/coming-soon',
                 parentId: 26
             },
             {
                 id: 33,
-                label: 'MENUITEMS.EXTRAPAGES.LIST.SITEMAP',
+                label: 'SITEMAP',
                 link: '/pages/sitemap',
                 parentId: 26
             },
             {
                 id: 33,
-                label: 'MENUITEMS.EXTRAPAGES.LIST.SEARCHRESULTS',
+                label: 'SEARCHRESULTS',
                 link: '/pages/search-results',
                 parentId: 26
             }
@@ -343,7 +343,7 @@ export const MENU: MenuItem[] = [
     },
     {
         id: 34,
-        label: 'MENUITEMS.WIDGETS.TEXT',
+        label: 'WIDGETS',
         icon: "bi bi-hdd-stack",
         link: '/widgets',
     },
@@ -361,36 +361,36 @@ export const MENU: MenuItem[] = [
     // },
     {
         id: 52,
-        label: 'MENUITEMS.APPS.TEXT',
+        label: 'APPS',
         isTitle: true
     },
     {
         id: 52,
-        label: 'MENUITEMS.APPS.LIST.CALENDAR',
+        label: 'CALENDAR',
         icon: 'bi bi-calendar3',
         link:'/apps/calendar'
     },
     {
         id: 56,
-        label: 'MENUITEMS.APPS.LIST.APIKEY',
+        label: 'APIKEY',
         icon: 'bi bi-key',
         link:'/apps/api-key'
     },
     {
         id: 73,
-        label: 'MENUITEMS.APPS.LIST.CONTACTS',
+        label: 'CONTACTS',
         icon: 'bi bi-person-square',
         link:'/apps/contact'
     },
     {
         id: 79,
-        label: 'MENUITEMS.APPS.LIST.LEADERBOEARD',
+        label: 'LEADERBOEARD',
         icon: 'bi bi-gem',
         link:'/apps/leaderboards'
     },
     {
         id: 83,
-        label: 'MENUITEMS.MULTILEVEL.TEXT',
+        label: 'MULTILEVEL',
         icon: 'bi bi-share',
         subItems: [
             {
