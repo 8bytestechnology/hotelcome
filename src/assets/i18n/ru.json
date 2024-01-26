@@ -1,140 +1,88 @@
 {
   "MENUITEMS": {
-    "COMPONENTS": {
-      "TEXT": "КОМПОНЕНТЫ"
+    "MENU": {
+      "TEXT": "МЕНЮ"
     },
-    "OVERVIEW": {
-      "TEXT": "Обзор"
+    "DASHBOARD": {
+      "TEXT": "Панели мониторинга"
     },
-    "BOOTSTRAPUI": {
-      "TEXT": "Начальный пользовательский интерфейс",
+    "PAGES": {
+      "TEXT": "Страницы"
+    },
+    "AUTHENTICATION": {
+      "TEXT": "Аутентификация",
       "LIST": {
-        "ALERTS": "Оповещения",
-        "BADGES": "Значки",
-        "BUTTONS": "Кнопки",
-        "COLORS": "Цвета",
-        "CARDS": "Карты",
-        "CAROUSEL": "Карусель",
-        "DROPDOWNS": "Выпадающие списки",
-        "GRID": "Сетка",
-        "IMAGES": "Изображений",
-        "TABS": "Вкладки",
-        "ACCORDION&COLLAPSE": "Аккордеон и свернуть",
-        "MODALS": "Модальные",
-        "OFFCANVAS": "Offcanvas",
-        "PLACEHOLDERS": "Заполнители",
-        "PROGRESS": "Прогресс",
-        "NOTIFICATIONS": "Уведомления",
-        "MEDIAOBJECT": "Медиа объект",
-        "EMBEDVIDEO": "Встроенное видео",
-        "TYPOGRAPHY": "Типография",
-        "LISTS": "Списки",
-        "GENERAL": "Общий",
-        "UTILITIES": "Утилиты"
+        "BASIC": "Базовый",
+        "BASIC2": "Базовый 2",
+        "COVER": "Крышка",
+        "SIGNIN": "Войти",
+        "SIGNUP": "Зарегистрироваться",
+        "PASSWORDRESET": "Восстановление пароля",
+        "PASSWORDCREATE": "Пароль Создать",
+        "LOCKSCREEN": "Экран блокировки",
+        "LOGOUT": "Выйти",
+        "SUCCESSMESSAGE": "Сообщение об успехе",
+        "TWOSTEPVERIFICATION": "Двухэтапная проверка",
+        "ERRORS": "Ошибки",
+        "404BASIC": "404 Базовый",
+        "404COVER": "404 Обложка",
+        "404ALT": "404 Альт",
+        "500": "пятьсот",
+        "OFFLINE": "Офлайн-страница"
       }
     },
-    "ADVANCEUI": {
-      "TEXT": "Расширенный пользовательский интерфейс",
+    "EXTRAPAGES": {
+      "TEXT": "Страницы",
       "LIST": {
-        "SWEETALERT": "Сладкие оповещения",
-        "NESTABLELIST":"Вложенный список",
-        "SCROLLBAR": "Полоса прокрутки",
-        "SWIPERSLIDER": "Слайдер Swiper",
-        "RATTINGS": "Рейтинги",
-        "HIGHLIGHT": "Выделять",
-        "SCROLLSPY": "ПрокруткаШпион"
-      }
-    },
-    "CUSTOMUI": {
-      "TEXT": "Пользовательский интерфейс",
-      "BADGE":"Обычай",
-      "LIST": {
-        "RIBBONS": "ленты",
-        "PROFILE":"Профиль",
-        "COUNTER": "Прилавок"
-      }
-    },
-    "FORMS": {
-      "TEXT": "Формы",
-      "LIST": {
-        "BASICELEMENTS": "Основные элементы",
-        "FORMSELECT":"Выбор формы",
-        "CHECKBOXS&RADIOS":"Флажки и радио",
-        "PICKERS":"Сборщики",
-        "INPUTMASKS": "Маска формы",
-        "ADVANCED": "Расширенная форма",
-        "RANGESLIDER":"Ползунок диапазона",
-        "VALIDATION": "Проверка формы",
-        "WIZARD": "Мастер форм",
-        "EDITORS": "Редакторы форм",
-        "FILEUPLOADS": "Загрузка файла формы",
-        "FORMLAYOUTS": "Макеты форм",
-        "TOMSELECT":"Том Селект"
-      }
-    },
-    "TABLES": {
-      "TEXT": "Столы",
-      "LIST": {
-        "BASICTABLES": "Основные таблицы",
-        "GRIDJS": "Сетка Js",
-        "LISTJS":"Список Js"
-      }
-    },  
-     "CHARTS": {
-      "TEXT": "Апексчарты",
-      "LIST": {
-        "LINE": "линия",
-        "AREA": "Область",
-        "COLUMN": "Столбец",
-        "BAR": "Бар",
-        "MIXED": "Смешанный",
+        "STARTER": "Стартер",
+        "PROFILE": "Профиль",
+        "SIMPLEPAGE": "Простая страница",
+        "SETTINGS": "Настройки",
+        "TEAM": "Команда",
         "TIMELINE": "График",
-        "CANDLESTICK": "Подсвечник",
-        "BOXPLOT": "Блочная диаграмма",
-        "BUBBLE": "Пузырь",
-        "SCATTER": "Разброс",
-        "HEATMAP": "Тепловая карта",
-        "TREEMAP": "Древовидная карта",
-        "PIE": "пирог",
-        "RADIALBAR": "Радиальная полоса",
-        "RADAR": "Радар",
-        "POLARAREA": "Поларареа"
+        "FAQS": "Часто задаваемые вопросы",
+        "PRICING": "Цены",
+        "MAINTENANCE": "Обслуживание",
+        "COMINGSOON": "Вскоре",
+        "SITEMAP": "Карта сайта",
+        "SEARCHRESULTS": "результаты поиска"
       }
     },
-    "ICONS": {
-      "TEXT": "Иконки",
-      "LIST": {
-        "REMIX": "Ремикс",
-        "BOXICONS": "Боксиконы",
-        "MATERIALDESIGN": "Материальный дизайн",
-        "BOOTSTRAP":"Начальная загрузка",
-        "PHOSPHOR": "фосфор"
-      }
+    "WIDGETS": {
+      "TEXT": "Виджеты"
     },
-    "MAPS": {
-      "TEXT": "Карты",
+    "COMPONENTS": {
+      "TEXT": "Компоненты"
+    },
+    "DOCUMENTATION": {
+      "TEXT": "Документация",
+      "BADGE":"v1.0"
+    },
+    "APPS": {
+      "TEXT": "Программы",
       "LIST": {
-        "GOOGLE": "Google",
-        "VECTOR": "Вектор",
-        "LEAFLET": "Листовка"
+        "CALENDAR": "Календарь",
+        "APIKEY":"API-ключ",
+        "CONTACTS": "Контакты",
+        "LEADERBOEARD":"Таблица лидеров"
       }
     },
     "MULTILEVEL": {
       "TEXT": "Многоуровневый",
       "LIST": {
         "LEVEL1": {
-          "1": "Уровень  1.1",
-          "2": "Уровень  1.2",
+          "1": "Уровень 1.1",
+          "2": "Уровень 1.2",
           "LEVEL2": {
-            "1": "Уровень  2.1",
-            "2": "Уровень  2.2",
+            "1": "Уровень 2.1",
+            "2": "Уровень 2.2",
             "LEVEL3": {
-              "1": "Уровень  3.1",
-              "2": "Уровень  3.2"
+              "1": "Уровень 3.1",
+              "2": "Уровень 3.2"
             }
           }
         }
       }
-    }        
+    }
   }
 }

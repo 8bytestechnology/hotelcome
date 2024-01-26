@@ -1,125 +1,70 @@
 {
   "MENUITEMS": {
-    "COMPONENTS": {
-      "TEXT": "COMPONENTI"
+    "MENU": {
+      "TEXT": "MENÙ"
     },
-    "OVERVIEW": {
-      "TEXT": "Panoramica"
+    "DASHBOARD": {
+      "TEXT": "Cruscotti"
     },
-    "BOOTSTRAPUI": {
-      "TEXT": "Interfaccia utente Bootstrap",
+    "PAGES": {
+      "TEXT": "Pagine"
+    },
+    "AUTHENTICATION": {
+      "TEXT": "Autenticazione",
       "LIST": {
-        "ALERTS": "Avvisi",
-        "BADGES": "Distintivi",
-        "BUTTONS": "Bottoni",
-        "COLORS": "Colori",
-        "CARDS": "Carte",
-        "CAROUSEL": "Giostra",
-        "DROPDOWNS": "menu a discesa",
-        "GRID": "Griglia",
-        "IMAGES": "immagini",
-        "TABS": "Schede",
-        "ACCORDION&COLLAPSE": "Fisarmonica e collasso",
-        "MODALS": "Modali",
-        "OFFCANVAS": "Fuori tela",
-        "PLACEHOLDERS": "Segnaposto",
-        "PROGRESS": "Progresso",
-        "NOTIFICATIONS": "Notifiche",
-        "MEDIAOBJECT": "Oggetto multimediale",
-        "EMBEDVIDEO": "Incorpora video",
-        "TYPOGRAPHY": "Tipografia",
-        "LISTS": "Liste",
-        "GENERAL": "Generale",
-        "UTILITIES": "Utilità"
+        "BASIC": "Di base",
+        "BASIC2": "Base 2",
+        "COVER": "Copertina",
+        "SIGNIN": "Registrazione",
+        "SIGNUP": "Iscrizione",
+        "PASSWORDRESET": "Reimpostazione della password",
+        "PASSWORDCREATE": "Password Crea",
+        "LOCKSCREEN": "Blocca schermo",
+        "LOGOUT": "Disconnettersi",
+        "SUCCESSMESSAGE": "Messaggio di successo",
+        "TWOSTEPVERIFICATION": "Verifica in due fasi",
+        "ERRORS": "Errori",
+        "404BASIC": "404 di base",
+        "404COVER": "404 Copertina",
+        "404ALT": "404 alt",
+        "500": "cinque­cento",
+        "OFFLINE": "Pagina non in linea"
       }
     },
-    "ADVANCEUI": {
-      "TEXT": "Interfaccia utente avanzata",
+    "EXTRAPAGES": {
+      "TEXT": "Pagine",
       "LIST": {
-        "SWEETALERT": "Dolci avvisi",
-        "NESTABLELIST":"Elenco annidabile",
-        "SCROLLBAR": "Barra di scorrimento",
-        "SWIPERSLIDER": "Cursore a scorrimento",
-        "RATTINGS": "Giudizi",
-        "HIGHLIGHT": "Evidenziare",
-        "SCROLLSPY": "ScrollSpy"
-      }
-    },
-    "CUSTOMUI": {
-      "TEXT": "Interfaccia utente personalizzata",
-      "BADGE":"Costume",
-      "LIST": {
-        "RIBBONS": "Nastri",
-        "PROFILE":"Profilo",
-        "COUNTER": "Contatrice"
-      }
-    },
-    "FORMS": {
-      "TEXT": "Forme",
-      "LIST": {
-        "BASICELEMENTS": "Elementi basici",
-        "FORMSELECT":"Seleziona modulo",
-        "CHECKBOXS&RADIOS":"Caselle di controllo e radio",
-        "PICKERS":"Raccoglitrici",
-        "INPUTMASKS": "Maschera di forma",
-        "ADVANCED": "Modulo Avanzato",
-        "RANGESLIDER":"Dispositivo di scorrimento dell'intervallo",
-        "VALIDATION": "Convalida del modulo",
-        "WIZARD": "Creazione guidata modulo",
-        "EDITORS": "Editor di moduli",
-        "FILEUPLOADS": "Caricamento file modulo",
-        "FORMLAYOUTS": "Layout del modulo",
-        "TOMSELECT":"Tom Seleziona"
-      }
-    },
-    "MORE":{
-      "TEXT": "Di più"
-    },
-    "TABLES": {
-      "TEXT": "Tabelle",
-      "LIST": {
-        "BASICTABLES": "Tabelle di base",
-        "GRIDJS": "Griglia J",
-        "LISTJS":"Elenco J"
-      }
-    },  
-     "CHARTS": {
-      "TEXT": "Apexcharts",
-      "LIST": {
-        "LINE": "linea",
-        "AREA": "La zona",
-        "COLUMN": "Colonna",
-        "BAR": "Sbarra",
-        "MIXED": "Mista",
+        "STARTER": "Antipasto",
+        "PROFILE": "Profilo",
+        "SIMPLEPAGE": "Pagina semplice",
+        "SETTINGS": "Impostazioni",
+        "TEAM": "Squadra",
         "TIMELINE": "Sequenza temporale",
-        "CANDLESTICK": "Candeliere",
-        "BOXPLOT": "Grafico a scatola",
-        "BUBBLE": "Bolla",
-        "SCATTER": "Disperdere",
-        "HEATMAP": "Mappa di calore",
-        "TREEMAP": "Mappa ad albero",
-        "PIE": "Torta",
-        "RADIALBAR": "Barra radiale",
-        "RADAR": "Radar",
-        "POLARAREA": "Area polare"
+        "FAQS": "Domande frequenti",
+        "PRICING": "Prezzi",
+        "MAINTENANCE": "Manutenzione",
+        "COMINGSOON": "Prossimamente",
+        "SITEMAP": "Mappa del sito",
+        "SEARCHRESULTS": "risultati di ricerca"
       }
     },
-    "ICONS": {
-      "TEXT": "Icone",
-      "LIST": {
-        "REMIX": "Remixa",
-        "BOXICONS": "Icone della scatola",
-        "MATERIALDESIGN": "Progettazione materiale",
-        "BOOTSTRAP":"Bootstrap",
-        "PHOSPHOR": "Fosforo"
-      }
+    "WIDGETS": {
+      "TEXT": "Widget"
     },
-    "MAPS": {
-      "TEXT": "Mappe",
+    "COMPONENTS": {
+      "TEXT": "Componenti"
+    },
+    "DOCUMENTATION": {
+      "TEXT": "Documentazione",
+      "BADGE":"v1.0"
+    },
+    "APPS": {
+      "TEXT": "App",
       "LIST": {
-        "GOOGLE": "Google",
-        "VECTOR": "Vettore",
-        "LEAFLET": "Volantino"
+        "CALENDAR": "Calendario",
+        "APIKEY":"Chiave dell'API",
+        "CONTACTS": "Contatti",
+        "LEADERBOEARD":"Classifica"
       }
     },
     "MULTILEVEL": {
@@ -136,8 +81,8 @@
               "2": "Livello 3.2"
             }
           }
-        } 
+        }
       }
-    }        
+    }
   }
 }

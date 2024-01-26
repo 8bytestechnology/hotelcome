@@ -1,122 +1,70 @@
 {
     "MENUITEMS": {
-      "COMPONENTS": {
-        "TEXT": "KOMPONENTEN"
+      "MENU": {
+        "TEXT": "SPEISEKARTE"
       },
-      "OVERVIEW": {
-        "TEXT": "Überblick"
+      "DASHBOARD": {
+        "TEXT": "Dashboards"
       },
-      "BOOTSTRAPUI": {
-        "TEXT": "Bootstrap-Benutzeroberfläche",
+      "PAGES": {
+        "TEXT": "Seiten"
+      },
+      "AUTHENTICATION": {
+        "TEXT": "Authentifizierung",
         "LIST": {
-          "ALERTS": "Warnungen",
-          "BADGES": "Abzeichen",
-          "BUTTONS": "Tasten",
-          "COLORS": "Farben",
-          "CARDS": "Karten",
-          "CAROUSEL": "Karussell",
-          "DROPDOWNS": "Dropdowns",
-          "GRID": "Netz",
-          "IMAGES": "Bilder",
-          "TABS": "Registerkarten",
-          "ACCORDION&COLLAPSE": "Akkordeon & Zusammenbruch",
-          "MODALS": "Modale",
-          "OFFCANVAS": "Leinwand",
-          "PLACEHOLDERS": "Platzhalter",
-          "PROGRESS": "Fortschritt",
-          "NOTIFICATIONS": "Benachrichtigungen",
-          "MEDIAOBJECT": "Medienobjekt",
-          "EMBEDVIDEO": "Video einbetten",
-          "TYPOGRAPHY": "Typografie",
-          "LISTS": "Listen",
-          "GENERAL": "Allgemein",
-          "UTILITIES": "Dienstprogramme"
+          "BASIC": "Basic",
+          "BASIC2": "Basis 2",
+          "COVER": "Abdeckung",
+          "SIGNIN": "Anmelden",
+          "SIGNUP": "Anmeldung",
+          "PASSWORDRESET": "Passwort zurücksetzen",
+          "PASSWORDCREATE": "Passwort erstellen",
+          "LOCKSCREEN": "Bildschirm sperren",
+          "LOGOUT": "Ausloggen",
+          "SUCCESSMESSAGE": "Erfolgsmeldung",
+          "TWOSTEPVERIFICATION": "Verifizierung in zwei Schritten",
+          "ERRORS": "Fehler",
+          "404BASIC": "404 Grundlegend",
+          "404COVER": "404 Abdeckung",
+          "404ALT": "404 Alt",
+          "500": "fünf­hundert",
+          "OFFLINE": "Offline-Seite"
         }
       },
-      "ADVANCEUI": {
-        "TEXT": "Erweiterte Benutzeroberfläche",
+      "EXTRAPAGES": {
+        "TEXT": "Seiten",
         "LIST": {
-          "SWEETALERT": "Süße Warnungen",
-          "NESTABLELIST":"Verschachtelbare Liste",
-          "SCROLLBAR": "Scrollleiste",
-          "SWIPERSLIDER": "Swiper-Schieberegler",
-          "RATTINGS": "Bewertungen",
-          "HIGHLIGHT": "Markieren",
-          "SCROLLSPY": "ScrollSpy"
-        }
-      },
-      "CUSTOMUI": {
-        "TEXT": "Benutzerdefinierte Benutzeroberfläche",
-        "BADGE":"Brauch",
-        "LIST": {
-          "RIBBONS": "Bänder",
-          "PROFILE":"Profil",
-          "COUNTER": "Schalter"
-        }
-      },
-      "FORMS": {
-        "TEXT": "Formen",
-        "LIST": {
-          "BASICELEMENTS": "Grundelemente",
-          "FORMSELECT":"Formular auswählen",
-          "CHECKBOXS&RADIOS":"Kontrollkästchen & Radios",
-          "PICKERS":"Pflücker",
-          "INPUTMASKS": "Formmaske",
-          "ADVANCED": "Formular erweitert",
-          "RANGESLIDER":"Range-Schieberegler",
-          "VALIDATION": "Formularvalidierung",
-          "WIZARD": "Formzauberer",
-          "EDITORS": "Formular-Editoren",
-          "FILEUPLOADS": "Hochladen von Formulardateien",
-          "FORMLAYOUTS": "Formularlayouts",
-          "TOMSELECT":"Tom auswählen"
-        }
-      },
-      "TABLES": {
-        "TEXT": "Tische",
-        "LIST": {
-          "BASICTABLES": "Grundlegende Tabellen",
-          "GRIDJS": "Gitter Js",
-          "LISTJS":"Liste Js"
-        }
-      },  
-       "CHARTS": {
-        "TEXT": "Apexcharts",
-        "LIST": {
-          "LINE": "Linie",
-          "AREA": "Bereich",
-          "COLUMN": "Spalte",
-          "BAR": "Bar",
-          "MIXED": "Gemischt",
+          "STARTER": "Anlasser",
+          "PROFILE": "Profil",
+          "SIMPLEPAGE": "Einfache Seite",
+          "SETTINGS": "Einstellungen",
+          "TEAM": "Team",
           "TIMELINE": "Zeitleiste",
-          "CANDLESTICK": "Leuchter",
-          "BOXPLOT": "Box-Plot",
-          "BUBBLE": "Blase",
-          "SCATTER": "Streuen",
-          "HEATMAP": "Heatmap",
-          "TREEMAP": "Baumkarte",
-          "PIE": "Kuchen",
-          "RADIALBAR": "Radialbar",
-          "RADAR": "Radar",
-          "POLARAREA": "Polargebiet"
+          "FAQS": "Häufig gestellte Fragen",
+          "PRICING": "Preisgestaltung",
+          "MAINTENANCE": "Wartung",
+          "COMINGSOON": "Demnächst",
+          "SITEMAP": "Seitenverzeichnis",
+          "SEARCHRESULTS": "Suchergebnisse"
         }
       },
-      "ICONS": {
-        "TEXT": "Symbole",
-        "LIST": {
-          "REMIX": "Remix",
-          "BOXICONS": "Boxicons",
-          "MATERIALDESIGN": "Material Design",
-          "BOOTSTRAP":"Bootstrap",
-          "PHOSPHOR": "Phosphor"
-        }
+      "WIDGETS": {
+        "TEXT": "Widgets"
       },
-      "MAPS": {
-        "TEXT": "Karten",
+      "COMPONENTS": {
+        "TEXT": "Komponenten"
+      },
+      "DOCUMENTATION": {
+        "TEXT": "Dokumentation",
+        "BADGE":"v1.0"
+      },
+      "APPS": {
+        "TEXT": "Anwendungen",
         "LIST": {
-          "GOOGLE": "Google",
-          "VECTOR": "Vektor",
-          "LEAFLET": "Flugblatt"
+          "CALENDAR": "Kalender",
+          "APIKEY":"API-Schlüssel",
+          "CONTACTS": "Kontakte",
+          "LEADERBOEARD":"Bestenliste"
         }
       },
       "MULTILEVEL": {
@@ -135,7 +83,7 @@
             }
           }
         }
-      }        
+      }
     }
   }
   

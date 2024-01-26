@@ -1,144 +1,88 @@
 {
-    "MENUITEMS": {
-      "COMPONENTS": {
-        "TEXT": "COMPONENTES"
-      },
-      "OVERVIEW": {
-        "TEXT": "Descripción general"
-      },
-      "BOOTSTRAPUI": {
-        "TEXT": "Interfaz de usuario de Bootstrap",
-        "LIST": {
-          "ALERTS": "Alertas",
-          "BADGES": "Insignias",
-          "BUTTONS": "Botones",
-          "COLORS": "Colores",
-          "CARDS": "Tarjetas",
-          "CAROUSEL": "Carrusel",
-          "DROPDOWNS": "Listas deplegables",
-          "GRID": "Red",
-          "IMAGES": "Imágenes",
-          "TABS": "Pestañas",
-          "ACCORDION&COLLAPSE": "Acordeón y colapsar",
-          "MODALS": "modales",
-          "OFFCANVAS": "Offcanvas",
-          "PLACEHOLDERS": "Marcadores de posición",
-          "PROGRESS": "Progreso",
-          "NOTIFICATIONS": "Notificaciones",
-          "MEDIAOBJECT": "objeto multimedia",
-          "EMBEDVIDEO": "Insertar video",
-          "TYPOGRAPHY": "Tipografía",
-          "LISTS": "Liza",
-          "GENERAL": "General",
-          "UTILITIES": "Utilidades"
+  "MENUITEMS": {
+    "MENU": {
+      "TEXT": "MENÚ"
+    },
+    "DASHBOARD": {
+      "TEXT": "Tableros"
+    },
+    "PAGES": {
+      "TEXT": "Paginas"
+    },
+    "AUTHENTICATION": {
+      "TEXT": "Autenticación",
+      "LIST": {
+        "BASIC": "Básica",
+        "BASIC2": "Básica 2",
+        "COVER": "Cubrir",
+        "SIGNIN": "Iniciar sesión",
+        "SIGNUP": "Inscribirse",
+        "PASSWORDRESET": "Restablecimiento de contraseña",
+        "PASSWORDCREATE": "Crear contraseña",
+        "LOCKSCREEN": "Bloquear pantalla",
+        "LOGOUT": "Cerrar sesión",
+        "SUCCESSMESSAGE": "Mensaje de éxito",
+        "TWOSTEPVERIFICATION": "Verificación de dos pasos",
+        "ERRORS": "errores",
+        "404BASIC": "404 Básica",
+        "404COVER": "404 cubierta",
+        "404ALT": "404 alternativa",
+        "500": "quinientos",
+        "OFFLINE": "Página sin conexión"
+      }
+    },
+    "EXTRAPAGES": {
+      "TEXT": "Paginas",
+      "LIST": {
+        "STARTER": "Arrancadora",
+        "PROFILE": "Perfil",
+        "SIMPLEPAGE": "Página sencilla",
+        "SETTINGS": "Ajustes",
+        "TEAM": "Equipo",
+        "TIMELINE": "Cronología",
+        "FAQS": "preguntas frecuentes",
+        "PRICING": "Precios",
+        "MAINTENANCE": "Mantenimiento",
+        "COMINGSOON": "Muy pronto",
+        "SITEMAP": "mapa del sitio",
+        "SEARCHRESULTS": "Resultados de la búsqueda"
+      }
+    },
+    "WIDGETS": {
+      "TEXT": "Widgets"
+    },
+    "COMPONENTS": {
+      "TEXT": "Componentes"
+    },
+    "DOCUMENTATION": {
+      "TEXT": "Documentación",
+      "BADGE": "v1.0"
+    },
+    "APPS": {
+      "TEXT": "aplicaciones",
+      "LIST": {
+        "CALENDAR": "Calendario",
+        "APIKEY": "Clave API",
+        "CONTACTS": "Contactos",
+        "LEADERBOEARD": "Tabla de clasificación"
+      }
+    },
+    "MULTILEVEL": {
+      "TEXT": "Multi nivel",
+      "LIST": {
+        "LEVEL1": {
+          "1": "Nivel 1.1",
+          "2": "Nivel 1.2",
+          "LEVEL2": {
+            "1": "Nivel 2.1",
+            "2": "Nivel 2.2",
+            "LEVEL3": {
+              "1": "Nivel 3.1",
+              "2": "Nivel 3.2"
+            }
+          }
         }
-      },
-      "ADVANCEUI": {
-        "TEXT": "Interfaz de usuario avanzada",
-        "LIST": {
-          "SWEETALERT": "Dulces alertas",
-          "NESTABLELIST":"Lista anidable",
-          "SCROLLBAR": "Barra de desplazamiento",
-          "SWIPERSLIDER": "Control deslizante Swiper",
-          "RATTINGS": "Calificaciones",
-          "HIGHLIGHT": "Destacar",
-          "SCROLLSPY": "DesplazamientoEspía"
-        }
-      },
-      "CUSTOMUI": {
-        "TEXT": "Interfaz de usuario personalizada",
-        "BADGE":"Costumbre",
-        "LIST": {
-          "RIBBONS": "Cintas",
-          "PROFILE":"Perfil",
-          "COUNTER": "Contadora"
-        }
-      },
-      "FORMS": {
-        "TEXT": "Formularios",
-        "LIST": {
-          "BASICELEMENTS": "Elementos basicos",
-          "FORMSELECT":"Selección de formulario",
-          "CHECKBOXS&RADIOS":"Casillas de verificación y radios",
-          "PICKERS":"Recolectoras",
-          "INPUTMASKS": "Máscara de forma",
-          "ADVANCED": "Formulario Avanzado",
-          "RANGESLIDER":"Deslizador de rango",
-          "VALIDATION": "Validación de formulario",
-          "WIZARD": "Asistente para formularios",
-          "EDITORS": "Editores de formularios",
-          "FILEUPLOADS": "Carga de archivo de formulario",
-          "FORMLAYOUTS": "Diseños de formulario",
-          "TOMSELECT":"Tomás Seleccionar"
-        }
-      },
-      "MORE":{
-        "TEXT": "Más"
-      },
-      "TABLES": {
-        "TEXT": "Mesas",
-        "LIST": {
-          "BASICTABLES": "Tablas Básicas",
-          "GRIDJS": "Cuadrícula J",
-          "LISTJS":"Lista J"
-        }
-      },  
-       "CHARTS": {
-        "TEXT": "Apexcharts",
-        "LIST": {
-          "LINE": "línea",
-          "AREA": "Área",
-          "COLUMN": "Columna",
-          "BAR": "Bar",
-          "MIXED": "Mezclada",
-          "TIMELINE": "Cronología",
-          "CANDLESTICK": "Candelero",
-          "BOXPLOT": "diagrama de caja",
-          "BUBBLE": "Burbuja",
-          "SCATTER": "Dispersión",
-          "HEATMAP": "Mapa de calor",
-          "TREEMAP": "Mapa de árbol",
-          "PIE": "Tarta",
-          "RADIALBAR": "barra radial",
-          "RADAR": "Radar",
-          "POLARAREA": "área polar"
-        }
-      },
-      "ICONS": {
-        "TEXT": "Iconos",
-        "LIST": {
-          "REMIX": "remezclar",
-          "BOXICONS": "Boxicons",
-          "MATERIALDESIGN": "Diseño de materiales",
-          "BOOTSTRAP":"Oreja",
-          "PHOSPHOR": "Fósforo"
-        }
-      },
-      "MAPS": {
-        "TEXT": "mapas",
-        "LIST": {
-          "GOOGLE": "Google",
-          "VECTOR": "Vector",
-          "LEAFLET": "Folleto"
-        }
-      },
-      "MULTILEVEL": {
-        "TEXT": "Multi nivel",
-        "LIST": {
-          "LEVEL1": {
-            "1": "Nivel 1.1",
-            "2": "Nivel 1.2",
-            "LEVEL2": {
-                "1": "Nivel 2.1",
-                "2": "Nivel 2.2",
-                "LEVEL3": {
-                    "1": "Nivel 3.1",
-                    "2": "Nivel 3.2"
-                  }
-              }
-          } 
-        }
-      }        
+      }
     }
   }
-  
+}
