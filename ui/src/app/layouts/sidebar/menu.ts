@@ -2,69 +2,79 @@ import { MenuItem } from "./menu.model";
 
 export const MENU: MenuItem[] = [
   {
-    id: 0,
+    id: 1,
     label: 'MENUITEMS.VERSION',
     isTitle: true
   },
   {
-    id: 1,
+    id: 2,
     label: 'MENUITEMS.DASHBORAD',
     icon: "bi bi-speedometer2",
     link: '/'
   },
 
   {
-    id: 2,
+    id: 3,
     label: 'MENUITEMS.ROOMS',
+    icon: "bi bi-houses",
     link: '/team',
 
   },
   {
-    id: 3,
+    id: 4,
     label: 'MENUITEMS.GUEST.TEXT',
     link: '/team',
+    icon: "bi bi-people-fill",
     subItems: [
       {
-        id: 21,
+        id: 41,
         label: 'MENUITEMS.GUEST.LIST.CHECKIN',
-        parentId: 3
+        link: '/team',
+        icon: 'bi bi-person-add',
+        parentId: 4,
+       
       },
       {
-        id: 22,
+        id: 42,
         label: 'MENUITEMS.GUEST.LIST.CHECKOUT',
-        parentId: 3
+        link: '/team',
+        icon: 'bi bi-person-dash',
+        parentId: 4
       },
     ]
 
   },
   {
-    id: 4,
+    id: 5,
     label: 'MENUITEMS.DEVICES',
     link: '/team',
+    icon: "bi bi-hdd-network-fill",
   },
 
   {
-    id: 5,
+    id: 6,
     label: 'MENUITEMS.CALENDER',
     icon: 'bi bi-calendar3',
     link: '/calendar'
   },
 
   {
-    id: 6,
-    label: 'MENUITEMS.CALL',
-    icon: 'bi bi-person-square',
-    link: '/call'
-  },
-  {
     id: 7,
-    label: 'MENUITEMS.SETTINGS',
-    link: '/settings',
-    parentId: 26
+    label: 'MENUITEMS.CALL',
+    icon: 'bi bi-telephone',
+    link: '/call',
   },
   {
     id: 8,
+    label: 'MENUITEMS.SETTINGS',
+    link: '/settings',
+    icon: 'bi bi-gear',
+    parentId: 26
+  },
+  {
+    id: 9,
     label: 'MENUITEMS.FAQS',
+    icon: 'bi bi-patch-plus-fill',
     link: '/faqs',
   },
   //{
