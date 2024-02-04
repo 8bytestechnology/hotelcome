@@ -1,69 +1,71 @@
 import { MenuItem } from "./menu.model";
 
 export const MENU: MenuItem[] = [
-  //{
-  //    id: 1,
-  //    label: 'MENUITEMS.MENU.TEXT',
-  //    isTitle: true
-  //},
-  //{
-  //    id: 2,
-  //    label: 'MENUITEMS.DASHBOARD.TEXT',
-  //    icon: "bi bi-speedometer2",
-  //    link: '/',
-  //},
+  {
+    id: 0,
+    label: 'MENUITEMS.VERSION',
+    isTitle: true
+  },
   {
     id: 1,
     label: 'MENUITEMS.DASHBORAD',
-    link: '/',
-    parentId: 26
+    icon: "bi bi-speedometer2",
+    link: '/'
   },
- 
+
   {
-    id: 1,
+    id: 2,
     label: 'MENUITEMS.ROOMS',
     link: '/team',
-    parentId: 26,
+
   },
   {
-    id: 29,
-    label: 'MENUITEMS.GUEST',
+    id: 3,
+    label: 'MENUITEMS.GUEST.TEXT',
     link: '/team',
-    parentId: 26
+    subItems: [
+      {
+        id: 21,
+        label: 'MENUITEMS.GUEST.LIST.CHECKIN',
+        parentId: 3
+      },
+      {
+        id: 22,
+        label: 'MENUITEMS.GUEST.LIST.CHECKOUT',
+        parentId: 3
+      },
+    ]
+
   },
   {
-    id: 29,
+    id: 4,
     label: 'MENUITEMS.DEVICES',
     link: '/team',
-    parentId: 26
   },
- 
-
 
   {
-    id: 52,
+    id: 5,
     label: 'MENUITEMS.CALENDER',
     icon: 'bi bi-calendar3',
     link: '/calendar'
   },
 
   {
-    id: 73,
+    id: 6,
     label: 'MENUITEMS.CALL',
     icon: 'bi bi-person-square',
     link: '/call'
   },
   {
-    id: 27,
+    id: 7,
     label: 'MENUITEMS.SETTINGS',
     link: '/settings',
     parentId: 26
   },
   {
-    id: 31,
+    id: 8,
     label: 'MENUITEMS.FAQS',
     link: '/faqs',
-    parentId: 26
   },
   //{
   //    id: 79,

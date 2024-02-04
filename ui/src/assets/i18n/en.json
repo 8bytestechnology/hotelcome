@@ -1,9 +1,17 @@
 {
+
   "MENUITEMS": {
- 
+    "VERSION": "HotelCom 1.0",
     "DASHBORAD": "Dashborad",
     "ROOMS": "Rooms",
     "DEVICES": "Devices",
+    "GUEST": {
+      "TEXT": "Guest",
+      "LIST": {
+        "CHECKIN": "CheckIn",
+        "CHECKOUT": "CheckOut"
+      }
+    },
     "FAQS": "FAQs",
     "CALL": "Call",
     "CALENDER": "Calendar",
