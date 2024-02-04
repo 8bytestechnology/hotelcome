@@ -382,7 +382,7 @@ export class WidgetsComponent {
        * BreadCrumb
        */
     this.breadCrumbItems = [
-      { label: 'Hybrix' },
+      { label: 'hotelcom' },
       { label: 'Widgets', active: true }
     ];
 

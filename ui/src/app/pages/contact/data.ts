@@ -249,7 +249,7 @@ const contactData = [
         id: 27,
         img: "assets/images/users/avatar-10.jpg",
         name: "Tonya Noble",
-        email: "tonyanoble@hybrix.com",
+        email: "tonyanoble@hotelcom.com",
         phone: "+(34) 414 453 5725",
         country: "Germany",
         label: "Business",

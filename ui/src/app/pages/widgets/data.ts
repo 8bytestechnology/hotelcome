@@ -117,42 +117,42 @@ const otherWidgets = [
 // Latest Sales
 const latestsales = [
     {
-        email: 'jordan.martino@hybrix.com',
+        email: 'jordan.martino@hotelcom.com',
         price: '$1.95',
         tag:'Paid'
     },
     {
-        email: 'nancy.martino@hybrix.com',
+        email: 'nancy.martino@hotelcom.com',
         price: '$5.00',
         tag:'Pending'
     },
     {
-        email: 'pieter.novitsky@hybrix.com',
+        email: 'pieter.novitsky@hotelcom.com',
         price: '$2.05',
         tag:'Paid'
     },
     {
-        email: 'Ashley@hybrix.com',
+        email: 'Ashley@hotelcom.com',
         price: '$69.99',
         tag:'Cancelled'
     },
     {
-        email: 'Heather@hybrix.com',
+        email: 'Heather@hotelcom.com',
         price: '$16.78',
         tag:'Cancelled'
     },
     {
-        email: 'Jimenez@hybrix.com',
+        email: 'Jimenez@hotelcom.com',
         price: '$79.99',
         tag:'Paid'
     },
     {
-        email: 'Daniel@hybrix.com',
+        email: 'Daniel@hotelcom.com',
         price: '$87.00',
         tag:'Pending'
     },
     {
-        email: 'Scott@hybrix.com',
+        email: 'Scott@hotelcom.com',
         price: '$42.32',
         tag:'Cancelled'
     }

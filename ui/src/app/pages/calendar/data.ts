@@ -205,7 +205,7 @@ const events: EventInput[] = [
     },
     {
         id: createEventId(),
-        title: "Hybrix Project",
+        title: "hotelcom Project",
         start: new Date(y, m, d + 23, 20, 0),
         end: new Date(y, m, d + 23, 16, 0),
         allDay: false,

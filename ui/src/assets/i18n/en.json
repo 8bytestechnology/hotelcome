@@ -1,91 +1,13 @@
 {
   "MENUITEMS": {
-    "MENU": {
-      "TEXT": "MENU"
-    },
-    "DASHBOARD": {
-      "TEXT": "Dashboard"
-    },
-    "PAGES": {
-      "TEXT": "Pages"
-    },
-    "AUTHENTICATION": {
-      "TEXT": "Authentication",
-      "LIST": {
-        "BASIC": "Basic",
-        "BASIC2": "Basic 2",
-        "COVER": "Cover",
-        "SIGNIN": "Sign In",
-        "SIGNUP": "Sign Up",
-        "PASSWORDRESET": "Password Reset",
-        "PASSWORDCREATE": "Password Create",
-        "LOCKSCREEN": "Lock Screen",
-        "LOGOUT": "Logout",
-        "SUCCESSMESSAGE": "Success Message",
-        "TWOSTEPVERIFICATION": "Two Step Verification",
-        "ERRORS": "Errors",
-        "404BASIC": "404 Basic",
-        "404COVER": "404 Cover",
-        "404ALT": "404 Alt",
-        "500": "500",
-        "OFFLINE": "Offline Page"
-      }
-    },
-    "EXTRAPAGES": {
-      "TEXT": "Pages",
-      "LIST": {
-        "STARTER": "Starter",
-        "PROFILE": "Profile",
-        "SIMPLEPAGE": "Simple Page",
-        "SETTINGS": "Settings",
-        "TEAM": "Team",
-        "TIMELINE": "Timeline",
-        "FAQS": "FAQs",
-        "PRICING": "Pricing",
-        "MAINTENANCE": "Maintenance",
-        "COMINGSOON": "Coming Soon",
-        "SITEMAP": "Sitemap",
-        "SEARCHRESULTS": "Search Results"
-      }
-    },
-    "WIDGETS": {
-      "TEXT": "Widgets"
-    },
-    "COMPONENTS": {
-      "TEXT": "Components"
-    },
-    "DOCUMENTATION": {
-      "TEXT": "Documentation",
-      "BADGE":"v1.0"
-    },
-    "MORE":{
-      "TEXT":"More"
-    },
-    "APPS": {
-      "TEXT": "Apps",
-      "LIST": {
-        "CALENDAR": "Calendar",
-        "APIKEY":"API Key",
-        "CONTACTS": "Contact",
-        "LEADERBOEARD":"LeaderBoard"
-      }
-    },
-    "MULTILEVEL": {
-      "TEXT": "Multi Level",
-      "LIST": {
-        "LEVEL1": {
-          "1": "Level 1.1",
-          "2": "Level 1.2",
-          "LEVEL2": {
-            "1": "Level 2.1",
-            "2": "Level 2.2",
-            "LEVEL3": {
-              "1": "Level 3.1",
-              "2": "Level 3.2"
-            }
-          }
-        }
-      }
-    }
+ 
+    "DASHBORAD": "Dashborad",
+    "ROOMS": "Rooms",
+    "DEVICES": "Devices",
+    "FAQS": "FAQs",
+    "CALL": "Call",
+    "CALENDER": "Calendar",
+    "REQUESTS": "Requests",
+    "SETTINGS": "Settings"
   }
 }
