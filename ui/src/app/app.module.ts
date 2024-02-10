@@ -20,6 +20,7 @@ import { JwtInterceptor } from './core/helpers/jwt.interceptor';
 
 // Component
 import { AppComponent } from './app.component';
+import { CoreModule } from './core/core.module';
 
 
 export function createTranslateLoader(http: HttpClient): any {
@@ -49,7 +50,8 @@ if (environment.defaultauth === 'firebase') {
     BrowserModule,
     AppRoutingModule,
     LayoutsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CoreModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

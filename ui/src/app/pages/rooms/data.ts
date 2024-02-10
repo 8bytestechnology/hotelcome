@@ -1,4 +1,4 @@
-const teamList = [
+const roomList = [
     {
         id: '1',
         img: 'assets/images/users/avatar-9.jpg',
@@ -108,4 +108,4 @@ const teamList = [
     }
 ]
 
-export { teamList }
+export { roomList }

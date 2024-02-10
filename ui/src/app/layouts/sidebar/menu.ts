@@ -17,27 +17,35 @@ export const MENU: MenuItem[] = [
     id: 3,
     label: 'MENUITEMS.ROOMS',
     icon: "bi bi-houses",
-    link: '/team',
+    link: '/room',
 
   },
   {
     id: 4,
     label: 'MENUITEMS.GUEST.TEXT',
-    link: '/team',
+    link: '/guest',
     icon: "bi bi-people-fill",
     subItems: [
       {
         id: 41,
+        label: 'MENUITEMS.GUEST.TEXT',
+        link: '/guest',
+        icon: 'bi bi-person-add',
+        parentId: 4,
+
+      },
+      {
+        id: 42,
         label: 'MENUITEMS.GUEST.LIST.CHECKIN',
-        link: '/team',
+        link: '/guest/checkin',
         icon: 'bi bi-person-add',
         parentId: 4,
        
       },
       {
-        id: 42,
+        id: 43,
         label: 'MENUITEMS.GUEST.LIST.CHECKOUT',
-        link: '/team',
+        link: '/guest/checkin',
         icon: 'bi bi-person-dash',
         parentId: 4
       },
@@ -47,7 +55,7 @@ export const MENU: MenuItem[] = [
   {
     id: 5,
     label: 'MENUITEMS.DEVICES',
-    link: '/team',
+    link: '/device',
     icon: "bi bi-hdd-network-fill",
   },
 

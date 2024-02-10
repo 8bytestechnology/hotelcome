@@ -8,14 +8,12 @@ import {
 import { Observable } from 'rxjs';
 
 import { AuthenticationService } from '../services/auth.service';
-import { AuthfakeauthenticationService } from '../services/authfake.service';
 import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class JwtInterceptor implements HttpInterceptor {
     constructor(
-        private authenticationService: AuthenticationService,
-        private authfackservice: AuthfakeauthenticationService
+        private authenticationService: AuthenticationService
     ) { }
 
     intercept(
@@ -34,7 +32,7 @@ export class JwtInterceptor implements HttpInterceptor {
             }
         } else {
             // add authorization header with jwt token if available
-            const currentUser = this.authfackservice.currentUserValue;
+          const currentUser = this.authenticationService.currentUserValue;
             if (currentUser && currentUser.token) {
                 request = request.clone({
                     setHeaders: {

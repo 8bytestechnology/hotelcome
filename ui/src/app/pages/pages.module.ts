@@ -44,13 +44,15 @@ import { WidgetsComponent } from './widgets/widgets.component';
 
 import { ProfileComponent } from './profile/profile.component';
 import { SettingsComponent } from './settings/settings.component';
-import { TeamComponent } from './team/team.component';
 import { FaqsComponent } from './faqs/faqs.component';
 import { NgOtpInputModule } from 'ng-otp-input';
 
 import { CalendarComponent } from './calendar/calendar.component';
 import { ContactComponent } from './contact/contact.component';
 import { LeaderboardsComponent } from './leaderboards/leaderboards.component';
+import { DeviceComponent } from './devices/device.component';
+import { GuestComponent } from './guests/guest.component';
+import { RoomComponent } from './rooms/room.component';
 
 
 
@@ -63,7 +65,9 @@ import { LeaderboardsComponent } from './leaderboards/leaderboards.component';
     WidgetsComponent,
     ProfileComponent,
     SettingsComponent,
-    TeamComponent,
+    DeviceComponent,
+    GuestComponent,
+    RoomComponent,
     FaqsComponent,
     CalendarComponent,
     ContactComponent,

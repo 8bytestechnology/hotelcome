@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Basic404Component } from './basic404.component';
+import { DeviceComponent } from './device.component';
 
-describe('Basic404Component', () => {
-  let component: Basic404Component;
-  let fixture: ComponentFixture<Basic404Component>;
+describe('DeviceComponent', () => {
+  let component: DeviceComponent;
+  let fixture: ComponentFixture<DeviceComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Basic404Component ]
+      declarations: [DeviceComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Basic404Component);
+    fixture = TestBed.createComponent(DeviceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
