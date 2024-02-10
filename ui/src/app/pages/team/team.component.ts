@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+import { CheckoutComponent } from './checkout/checkout.component'; // Import CheckoutComponent
 
 // Data Get
 import { teamList } from './data';
@@ -31,6 +32,7 @@ export class TeamComponent {
   @ViewChild('memberOverview', { static: false }) memberOverview?: NgxAsideComponent;
   @ViewChild('addmemberModal', { static: false }) addmemberModal?: ModalDirective;
   @ViewChild('removeMemberModal', { static: false }) removeMemberModal?: ModalDirective;
+  @ViewChild(CheckoutComponent, { static: false }) checkoutComponent?: CheckoutComponent;
   teammember: any;
   econtent: any;
   deleteID!: any;
@@ -75,6 +77,10 @@ export class TeamComponent {
 
   }
 
+  handleCheckout(): void {
+    this.checkoutComponent?.checkout();
+  }
+
   /**
 * Form data get
 */
@@ -99,6 +105,7 @@ export class TeamComponent {
     modelTitle.innerHTML = 'Edit Order';
     var updateBtn = document.getElementById('addNewMember') as HTMLAreaElement;
     updateBtn.innerHTML = "Save";
+
     
     var econtent = this.teamlists[id];
 

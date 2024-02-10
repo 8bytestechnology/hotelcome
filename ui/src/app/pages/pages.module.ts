@@ -48,9 +48,11 @@ import { TeamComponent } from './team/team.component';
 import { FaqsComponent } from './faqs/faqs.component';
 import { NgOtpInputModule } from 'ng-otp-input';
 
+
 import { CalendarComponent } from './calendar/calendar.component';
 import { ContactComponent } from './contact/contact.component';
 import { LeaderboardsComponent } from './leaderboards/leaderboards.component';
+import { CheckoutComponent } from './team/checkout/checkout.component';
 
 
 
@@ -68,7 +70,8 @@ import { LeaderboardsComponent } from './leaderboards/leaderboards.component';
     CalendarComponent,
     ContactComponent,
     NgbdContactSortableHeader,
-    LeaderboardsComponent
+    LeaderboardsComponent,
+    CheckoutComponent
   ],
   imports: [
     CommonModule,
