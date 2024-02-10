@@ -34,6 +34,94 @@
           "portfolio": []
         }
       }
+    },
+    {
+      "Path": "/room",
+      "Methode": "GET",
+      "Response": [
+        {
+
+          "Id": "1",
+          "Name": "401",
+          "accesstoken": "fc49d6ab821af01824adedb3391d45131cf631e4c1d4cb02fd69c40567b06775",
+          "checkin": "2023-05-16T06:34:56.473Z",
+          "checkout": "2023-05-17T06:34:56.473Z",
+          "occupied": "true",
+          "guestid": "3245343",
+          "devices": [
+            {
+              "id": "123",
+              "name": "dsd",
+              "token": "sdsdwsdsdsdsd",
+              "isonline": "true",
+              "lastconnceted": ""
+            },
+            {
+              "id": "123324",
+              "name": "dsd",
+              "token": "sdsdwsdsdsdsd",
+              "isonline": "false",
+              "lastconnceted": ""
+            }
+          ],
+          "notification": "2"
+        },
+        {
+
+          "Id": "2",
+          "Name": "402",
+          "accesstoken": "fc49d6ab821af01824adedb3391d45131cf631e4c1d4cb02fd69c40567b06775",
+          "checkin": "2023-05-16T06:34:56.473Z",
+          "checkout": "2023-05-17T06:34:56.473Z",
+          "occupied": "true",
+          "guestid": "3245343",
+          "devices": [
+            {
+              "id": "123",
+              "name": "dsd",
+              "token": "sdsdwsdsdsdsd",
+              "isonline": "true",
+              "lastconnceted": ""
+            },
+            {
+              "id": "123324",
+              "name": "dsd",
+              "token": "sdsdwsdsdsdsd",
+              "isonline": "false",
+              "lastconnceted": ""
+            }
+          ],
+          "notification": "2"
+        },
+        {
+
+          "Id": "3",
+          "Name": "403",
+          "accesstoken": "fc49d6ab821af01824adedb3391d45131cf631e4c1d4cb02fd69c40567b06775",
+          "checkin": "2023-05-16T06:34:56.473Z",
+          "checkout": "2023-05-17T06:34:56.473Z",
+          "occupied": "true",
+          "guestid": "3245343",
+          "devices": [
+            {
+              "id": "123",
+              "name": "dsd",
+              "token": "sdsdwsdsdsdsd",
+              "isonline": "true",
+              "lastconnceted": ""
+            },
+            {
+              "id": "123324",
+              "name": "dsd",
+              "token": "sdsdwsdsdsdsd",
+              "isonline": "false",
+              "lastconnceted": ""
+            }
+          ],
+          "notification": "2"
+        }
+      ]
     }
+
   ]
 }
