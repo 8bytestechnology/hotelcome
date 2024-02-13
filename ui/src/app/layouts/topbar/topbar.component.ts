@@ -152,7 +152,7 @@ export class TopbarComponent {
     // } else {
     //   this.authFackservice.logout();
     // }
-    this.router.navigate(['/auth/logout/basic']);
+    this.router.navigate(['/auth/login']);
   }
 
 }

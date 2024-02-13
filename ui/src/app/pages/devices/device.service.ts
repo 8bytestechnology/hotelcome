@@ -6,13 +6,13 @@ import {BehaviorSubject, Observable, of, Subject} from 'rxjs';
 import {DatePipe} from '@angular/common';
 
 
-import {TeamModel} from './team.model';
-import {teamList} from './data';
+import { DeviceModel } from './device.model';
+import { deviceList } from './data';
 import {DecimalPipe} from '@angular/common';
 import {debounceTime, delay, switchMap, tap} from 'rxjs/operators';
 
-interface SearchResult {
-  countries: TeamModel[];
+interface DeviceResult {
+  countries: DeviceModel[];
   total: number;
 }
 
@@ -30,7 +30,7 @@ interface State {
 
 const compare = (v1: string | number, v2: string | number) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
 
-function sort(countries: TeamModel[]): TeamModel[] {
+function sort(countries: DeviceModel[]): DeviceModel[] {
   // if (direction === '') {
     return countries;
   // } else {
@@ -41,7 +41,7 @@ function sort(countries: TeamModel[]): TeamModel[] {
   // }
 }
 
-function matches(country: TeamModel, term: string, pipe: PipeTransform) {
+function matches(country: DeviceModel, term: string, pipe: PipeTransform) {
   return country.name.toLowerCase().includes(term.toLowerCase())
     || country.designation.toLowerCase().includes(term.toLowerCase())
   || country.atname.toLowerCase().includes(term.toLowerCase())
@@ -54,10 +54,10 @@ function matches(country: TeamModel, term: string, pipe: PipeTransform) {
 }
 
 @Injectable({providedIn: 'root'})
-export class TeamService {
+export class DeviceService {
   private _loading$ = new BehaviorSubject<boolean>(true);
   private _search$ = new Subject<void>();
-  private _countries$ = new BehaviorSubject<TeamModel[]>([]);
+  private _countries$ = new BehaviorSubject<DeviceModel[]>([]);
   private _total$ = new BehaviorSubject<number>(0);
 
   content?: any;
@@ -89,7 +89,7 @@ export class TeamService {
 
     this._search$.next();
 
-    this.products = teamList
+    this.products = deviceList
   }
 
   get countries$() { return this._countries$.asObservable(); }
@@ -121,7 +121,7 @@ export class TeamService {
     this._search$.next();
   }
 
-  private _search(): Observable<SearchResult> {
+  private _search(): Observable<DeviceResult> {
     const datas = (this.product) ?? [];
     const {pageSize, page, searchTerm, status, payment, date} = this._state; 
 

@@ -1,23 +1,22 @@
 import { Component, ViewChild } from '@angular/core';
-import { CheckoutComponent } from './checkout/checkout.component'; // Import CheckoutComponent
 
 // Data Get
-import { teamList } from './data';
+import { deviceList } from './data';
 import { NgxAsideComponent } from 'ngx-aside/lib/aside.component';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
-import { TeamService } from './team.service';
+import { DeviceService } from './device.service';
 import { DecimalPipe } from '@angular/common';
 import { ModalDirective } from 'ngx-bootstrap/modal';
 import { Observable } from 'rxjs';
-import { TeamModel } from './team.model';
+import { DeviceModel } from './device.model';
 
 @Component({
-  selector: 'app-team',
-  templateUrl: './team.component.html',
-  styleUrls: ['./team.component.scss'],
-  providers: [TeamService, DecimalPipe]
+  selector: 'app-device',
+  templateUrl: './device.component.html',
+  styleUrls: ['./device.component.scss'],
+  providers: [DeviceService, DecimalPipe]
 })
-export class TeamComponent {
+export class DeviceComponent {
 
   // bread crumb items
   breadCrumbItems!: Array<{}>;
@@ -26,19 +25,18 @@ export class TeamComponent {
   submitted = false;
 
   // Table data
-  teamdata!: Observable<TeamModel[]>;
+  teamdata!: Observable<DeviceModel[]>;
   total: Observable<number>;
 
   @ViewChild('memberOverview', { static: false }) memberOverview?: NgxAsideComponent;
   @ViewChild('addmemberModal', { static: false }) addmemberModal?: ModalDirective;
   @ViewChild('removeMemberModal', { static: false }) removeMemberModal?: ModalDirective;
-  @ViewChild(CheckoutComponent, { static: false }) checkoutComponent?: CheckoutComponent;
   teammember: any;
   econtent: any;
   deleteID!: any;
 
   constructor(private formBuilder: UntypedFormBuilder,
-    public service: TeamService) {
+    public service: DeviceService) {
     this.teamdata = service.countries$;
     this.total = service.total$;
   }
@@ -73,12 +71,8 @@ export class TeamComponent {
     }, 1200)
 
     // Fetch Data
-    this.teamlists = teamList
+    this.teamlists = deviceList
 
-  }
-
-  handleCheckout(): void {
-    this.checkoutComponent?.checkout();
   }
 
   /**
@@ -105,7 +99,6 @@ export class TeamComponent {
     modelTitle.innerHTML = 'Edit Order';
     var updateBtn = document.getElementById('addNewMember') as HTMLAreaElement;
     updateBtn.innerHTML = "Save";
-
     
     var econtent = this.teamlists[id];
 
@@ -142,14 +135,14 @@ export class TeamComponent {
   saveMember() {
     if (this.memberForm.valid) {
       if (this.memberForm.get('id')?.value) {
-        this.service.products = teamList.map((order: { id: any; }) => order.id === this.memberForm.get('_id')?.value ? { ...order, ...this.memberForm.value } : order);
+        this.service.products = deviceList.map((order: { id: any; }) => order.id === this.memberForm.get('_id')?.value ? { ...order, ...this.memberForm.value } : order);
       }
 
       else {
         const name = this.memberForm.get('name')?.value;
         const designation = this.memberForm.get('designation')?.value;
 
-        teamList.push({
+        deviceList.push({
           id: this.teamlists.length + 1,
           name,
           designation,
@@ -165,7 +158,7 @@ export class TeamComponent {
       }
       this.memberForm.reset();
       this.addmemberModal?.hide()
-      console.log(teamList)
+      console.log(deviceList)
     }
     setTimeout(() => {
       this.memberForm.reset();
@@ -179,7 +172,7 @@ export class TeamComponent {
   }
 
   deleteRecord() {
-    teamList.splice(this.deleteID, 1)
+    deviceList.splice(this.deleteID, 1)
     this.removeMemberModal?.hide()
   }
 }

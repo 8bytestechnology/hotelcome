@@ -4,7 +4,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 // Login Auth
 import { AuthenticationService } from '../../core/services/auth.service';
-import { AuthfakeauthenticationService } from '../../core/services/authfake.service';
 
 @Component({
   selector: 'app-login',
@@ -23,8 +22,10 @@ export class LoginComponent {
     // set the currenr year
   year: number = new Date().getFullYear();
   
-  constructor(private formBuilder: UntypedFormBuilder,private authenticationService: AuthenticationService,private router: Router,
-    private authFackservice: AuthfakeauthenticationService,private route: ActivatedRoute) {
+  constructor(private formBuilder: UntypedFormBuilder,
+    private authenticationService: AuthenticationService,
+    private router: Router,
+  private route: ActivatedRoute) {
       // redirect to home if already logged in
       if (this.authenticationService.currentUserValue) {
         this.router.navigate(['/']);

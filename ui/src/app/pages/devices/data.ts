@@ -1,0 +1,111 @@
+const deviceList = [
+    {
+        id: '1',
+        img: 'assets/images/users/avatar-9.jpg',
+        name: 'Ross Jordan',
+        atname: '@ross',
+        contact: '501-804-0411',
+        email: 'rossjordan@gmail.com',
+        designation: 'Web Designer',
+        progressrate: 32,
+        project: '874',
+        overdue: '21',
+        task: '1032'
+    },
+    {
+        id: '2',
+        img: 'assets/images/users/avatar-8.jpg',
+        name: 'Patience harrington',
+        atname: '@patience',
+        contact: '870-455-0378',
+        email: 'patienceharrington@gmail.com',
+        designation: 'Account Executive',
+        progressrate: 87,
+        project: '514',
+        overdue: '21',
+        task: '225',
+        star:true
+    },
+    {
+        id: '3',
+        img: 'assets/images/users/avatar-6.jpg',
+        name: 'Bryant Diaz',
+        atname: '@bryant',
+        contact: '530-461-3338',
+        email: 'bryantdiaz@gmail.com',
+        designation: 'Engineering Manager',
+        progressrate: 85,
+        project: '302',
+        overdue: '12',
+        task: '712'
+    },
+    {
+        id: '4',
+        img: 'assets/images/users/avatar-5.jpg',
+        name: 'Damon Boxter',
+        atname: '@damon',
+        contact: '303-215-6114',
+        email: 'damonboxter@gmail.com',
+        designation: 'UI/UX Designer',
+        progressrate: 70,
+        project: '526',
+        overdue: '18',
+        task: '632',
+        star:true
+    },
+    {
+        id: '5',
+        img: 'assets/images/users/avatar-4.jpg',
+        name: 'Jordan Villareal',
+        atname: '@jordan',
+        contact: '276-646-2337',
+        email: 'jordanvillareal@gmail.com',
+        designation: 'Software Engineer',
+        progressrate: 65,
+        project: '321',
+        overdue: '20',
+        task: '1002'
+    },
+    {
+        id: '6',
+        img: 'assets/images/users/avatar-3.jpg',
+        name: 'Cristofer Leblanc',
+        atname: '@cristofer',
+        contact: '330-850-7683',
+        email: 'cristoferleblanc@gmail.com',
+        designation: 'Product Manager',
+        progressrate: 50,
+        project: '285',
+        overdue: '10',
+        task: '132'
+    },
+    {
+        id: '7',
+        img: 'assets/images/users/avatar-2.jpg',
+        name: 'Allyson Booker',
+        atname: '@allyson',
+        contact: '314-835-9287',
+        email: 'allysonbooker@gmail.com',
+        designation: 'Lead Product Design',
+        progressrate: 38,
+        project: '174',
+        overdue: '15',
+        task: '500',
+        star:true
+    },
+    {
+        id: '8',
+        img: 'assets/images/users/avatar-1.jpg',
+        name: 'Marie Ward',
+        atname: '@marie',
+        contact: '215-820-4037',
+        email: 'marieward@gmail.com',
+        designation: 'Project Manager',
+        progressrate: 85,
+        project: '874',
+        overdue: '21',
+        task: '1032'
+    }
+]
+
+export { deviceList }

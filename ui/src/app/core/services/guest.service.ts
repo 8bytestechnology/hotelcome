@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { User } from '../models/auth.models';
 
 @Injectable({ providedIn: 'root' })
-export class UserProfileService {
+export class guestService {
     constructor(private http: HttpClient) { }
     /***
      * Get All User

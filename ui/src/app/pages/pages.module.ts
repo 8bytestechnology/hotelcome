@@ -44,7 +44,6 @@ import { WidgetsComponent } from './widgets/widgets.component';
 
 import { ProfileComponent } from './profile/profile.component';
 import { SettingsComponent } from './settings/settings.component';
-import { TeamComponent } from './team/team.component';
 import { FaqsComponent } from './faqs/faqs.component';
 import { NgOtpInputModule } from 'ng-otp-input';
 
@@ -52,7 +51,6 @@ import { NgOtpInputModule } from 'ng-otp-input';
 import { CalendarComponent } from './calendar/calendar.component';
 import { ContactComponent } from './contact/contact.component';
 import { LeaderboardsComponent } from './leaderboards/leaderboards.component';
-import { CheckoutComponent } from './team/checkout/checkout.component';
 
 
 
@@ -65,7 +63,9 @@ import { CheckoutComponent } from './team/checkout/checkout.component';
     WidgetsComponent,
     ProfileComponent,
     SettingsComponent,
-    TeamComponent,
+    DeviceComponent,
+    GuestComponent,
+    RoomComponent,
     FaqsComponent,
     CalendarComponent,
     ContactComponent,

@@ -1,6 +1,5 @@
 <!-- Start Breadcrumbs -->
-<app-breadcrumbs title="Team" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
-<app-checkout></app-checkout>
+<app-breadcrumbs title="Devices" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
 <!-- End Breadcrumbs -->
 
 <div class="row">
@@ -92,8 +91,25 @@
                     <div class="d-none member-email">{{data.email}}</div>
                     <span class="badge badge-soft-success member-designation">{{data.designation}}</span>
                 </div>
-                <div class="text-center">
-                    <button class="btn btn-primary" (click)="handleCheckout()">Proceed to Checkout</button>
+
+                <progressbar class="animated-progress progress-sm progress-label" [animate]="true"
+                    [value]="data.progressrate">
+                    <div class="label">{{data.progressrate}}%</div>
+                </progressbar>
+
+                <div class="row text-muted text-center mt-4">
+                    <div class="col-4 border-end border-end-dashed">
+                        <h5 class="mb-1 projects-num">{{data.project}}</h5>
+                        <p class="text-muted mb-0">Projects</p>
+                    </div>
+                    <div class="col-4 border-end border-end-dashed">
+                        <h5 class="mb-1 projects-num">{{data.overdue}}</h5>
+                        <p class="text-muted mb-0">Overdue</p>
+                    </div>
+                    <div class="col-4">
+                        <h5 class="mb-1 tasks-num">{{data.task}}</h5>
+                        <p class="text-muted mb-0">Tasks</p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-export interface TeamModel {
+export interface DeviceModel {
   _id: number;
   img: any;
   name: string;
