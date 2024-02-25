@@ -41,17 +41,13 @@ function sort(countries: RoomModel[]): RoomModel[] {
   // }
 }
 
-function matches(country: RoomModel, term: string, pipe: PipeTransform) {
-  return country.name.toLowerCase().includes(term.toLowerCase())
-    || country.designation.toLowerCase().includes(term.toLowerCase())
-  || country.atname.toLowerCase().includes(term.toLowerCase())
-  || country.contact.toLowerCase().includes(term.toLowerCase())
-  || country.email.toLowerCase().includes(term.toLowerCase())
-  || country.project.toLowerCase().includes(term.toLowerCase())
-  || country.overdue.toLowerCase().includes(term.toLowerCase())
-  || country.task.toLowerCase().includes(term.toLowerCase());
+// function matches(country: RoomModel, term: string, pipe: PipeTransform) {
+//   return  country.occupied.toLowerCase().includes(term.toLowerCase())
+//   || country.checkin.toLowerCase().includes(term.toLowerCase())
+//   || country.checkout.toLowerCase().includes(term.toLowerCase())
+//   || country.devices.toLowerCase().includes(term.toLowerCase());
 
-}
+// }
 
 @Injectable({providedIn: 'root'})
 export class RoomService {
@@ -129,7 +125,7 @@ export class RoomService {
     let countries = sort(datas);    
 
     // 2. filter
-    countries = countries.filter(country => matches(country, searchTerm, this.pipe));     
+    // countries = countries.filter(country => matches(country, searchTerm, this.pipe));     
    
     const total = countries.length;
 
