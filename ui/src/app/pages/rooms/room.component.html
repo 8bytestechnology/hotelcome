@@ -95,7 +95,9 @@
                 <div class="row text-muted text-center mt-4">
                     <div class="col-4 border-end border-end-dashed">
                         <p class="text-muted mb-0">Checkin</p>
-                        <h5 class="mb-1 projects-num">{{data.checkin}}</h5>
+                         <p>{{ data.checkin | dateTimeAgo }}</p>
+
+
                     </div>
                     <div class="col-4 border-end border-end-dashed">
                         <p class="text-muted mb-0">Checkout</p>

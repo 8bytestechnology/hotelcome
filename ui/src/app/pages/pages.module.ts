@@ -59,6 +59,7 @@ import { RoomComponent } from './rooms/room.component';
 
 
 
+
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -72,7 +73,7 @@ import { RoomComponent } from './rooms/room.component';
     CalendarComponent,
     ContactComponent,
     NgbdContactSortableHeader,
-    LeaderboardsComponent
+    LeaderboardsComponent,
   ],
   imports: [
     CommonModule,

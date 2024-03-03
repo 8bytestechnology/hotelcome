@@ -40,7 +40,6 @@ function sort(countries: RoomModel[]): RoomModel[] {
   //   });
   // }
 }
-
 // function matches(country: RoomModel, term: string, pipe: PipeTransform) {
 //   return  country.occupied.toLowerCase().includes(term.toLowerCase())
 //   || country.checkin.toLowerCase().includes(term.toLowerCase())

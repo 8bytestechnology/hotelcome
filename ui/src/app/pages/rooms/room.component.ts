@@ -11,11 +11,14 @@ import { ModalDirective } from 'ngx-bootstrap/modal';
 import { Observable } from 'rxjs';
 import { RoomModel } from './room.model';
 
+
+
 @Component({
   selector: 'app-room',
   templateUrl: './room.component.html',
   styleUrls: ['./room.component.scss'],
   providers: [RoomService, DecimalPipe]
+  
 })
 export class RoomComponent {
 
@@ -36,6 +39,7 @@ export class RoomComponent {
   teammember: any;
   econtent: any;
   deleteID!: any;
+someDate: any;
 
   constructor(private formBuilder: UntypedFormBuilder,
     public service: RoomService) {
@@ -112,8 +116,8 @@ export class RoomComponent {
     var img_data = document.getElementById('member-img') as HTMLImageElement;
     img_data.src = econtent.img
 
-    this.memberForm.controls['_id'].setValue(econtent.id);
-    this.memberForm.controls['roomno'].setValue(econtent.name);
+    this.memberForm.controls['id'].setValue(econtent.id);
+    this.memberForm.controls['roomno'].setValue(econtent.roomno);
     this.memberForm.controls['occupied'].setValue(econtent.occupied);
     console.log(econtent)
   }
@@ -142,7 +146,7 @@ export class RoomComponent {
   saveMember() {
     if (this.memberForm.valid) {
       if (this.memberForm.get('id')?.value) {
-        this.service.products = roomList.map((order: { id: any; }) => order.id === this.memberForm.get('_id')?.value ? { ...order, ...this.memberForm.value } : order);
+        this.service.products = roomList.map((order: { id: any; }) => order.id === this.memberForm.get('id')?.value ? { ...order, ...this.memberForm.value } : order);
       }
 
       else {
@@ -176,7 +180,10 @@ export class RoomComponent {
   }
 
   deleteRecord() {
-    roomList.splice(this.deleteID, 1)
-    this.removeMemberModal?.hide()
+    if (this.deleteID !== undefined) {
+      roomList.splice(this.deleteID, 1);
+      this.removeMemberModal?.hide();
+    }
   }
+  
 }
