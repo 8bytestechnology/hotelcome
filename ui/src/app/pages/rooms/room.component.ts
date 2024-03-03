@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+// import { CheckoutComponent } from './checkout/checkout.component'; // Import CheckoutComponent
 
 // Data Get
 import { roomList } from './data';
@@ -10,11 +11,14 @@ import { ModalDirective } from 'ngx-bootstrap/modal';
 import { Observable } from 'rxjs';
 import { RoomModel } from './room.model';
 
+
+
 @Component({
   selector: 'app-room',
   templateUrl: './room.component.html',
   styleUrls: ['./room.component.scss'],
   providers: [RoomService, DecimalPipe]
+  
 })
 export class RoomComponent {
 
@@ -31,9 +35,11 @@ export class RoomComponent {
   @ViewChild('memberOverview', { static: false }) memberOverview?: NgxAsideComponent;
   @ViewChild('addmemberModal', { static: false }) addmemberModal?: ModalDirective;
   @ViewChild('removeMemberModal', { static: false }) removeMemberModal?: ModalDirective;
+  // @ViewChild(CheckoutComponent, { static: false }) checkoutComponent?: CheckoutComponent;
   teammember: any;
   econtent: any;
   deleteID!: any;
+someDate: any;
 
   constructor(private formBuilder: UntypedFormBuilder,
     public service: RoomService) {
@@ -58,8 +64,8 @@ export class RoomComponent {
       orderId: "#VZ2101",
       // _id: "#1",
       _id: [''],
-      name: ['', [Validators.required]],
-      designation: ['', [Validators.required]]
+      roomno: ['', [Validators.required]],
+      // designation: ['', [Validators.required]]
     });
 
     // Fetch Data
@@ -74,6 +80,10 @@ export class RoomComponent {
     this.teamlists = roomList
 
   }
+
+  // handleCheckout(): void {
+  //   this.checkoutComponent?.checkout();
+  // }
 
   /**
 * Form data get
@@ -99,15 +109,16 @@ export class RoomComponent {
     modelTitle.innerHTML = 'Edit Order';
     var updateBtn = document.getElementById('addNewMember') as HTMLAreaElement;
     updateBtn.innerHTML = "Save";
+
     
     var econtent = this.teamlists[id];
 
     var img_data = document.getElementById('member-img') as HTMLImageElement;
     img_data.src = econtent.img
 
-    this.memberForm.controls['_id'].setValue(econtent.id);
-    this.memberForm.controls['name'].setValue(econtent.name);
-    this.memberForm.controls['designation'].setValue(econtent.designation);
+    this.memberForm.controls['id'].setValue(econtent.id);
+    this.memberForm.controls['roomno'].setValue(econtent.roomno);
+    this.memberForm.controls['occupied'].setValue(econtent.occupied);
     console.log(econtent)
   }
 
@@ -135,25 +146,22 @@ export class RoomComponent {
   saveMember() {
     if (this.memberForm.valid) {
       if (this.memberForm.get('id')?.value) {
-        this.service.products = roomList.map((order: { id: any; }) => order.id === this.memberForm.get('_id')?.value ? { ...order, ...this.memberForm.value } : order);
+        this.service.products = roomList.map((order: { id: any; }) => order.id === this.memberForm.get('id')?.value ? { ...order, ...this.memberForm.value } : order);
       }
 
       else {
-        const name = this.memberForm.get('name')?.value;
-        const designation = this.memberForm.get('designation')?.value;
+
 
         roomList.push({
           id: this.teamlists.length + 1,
-          name,
-          designation,
+          roomno:'',
           img: 'assets/images/users/avatar-1.jpg',
-          atname: '@' + name,
-          contact: '',
-          email: '',
-          progressrate: 0,
-          project: '0',
-          overdue: '0',
-          task: '0'
+          accesstoken: '',
+          checkin: '',
+          checkout: '0',
+          occupied: '1',
+          guestid: '0',
+          devices:[],
         })
       }
       this.memberForm.reset();
@@ -172,7 +180,10 @@ export class RoomComponent {
   }
 
   deleteRecord() {
-    roomList.splice(this.deleteID, 1)
-    this.removeMemberModal?.hide()
+    if (this.deleteID !== undefined) {
+      roomList.splice(this.deleteID, 1);
+      this.removeMemberModal?.hide();
+    }
   }
+  
 }

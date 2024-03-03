@@ -40,87 +40,57 @@
       "Methode": "GET",
       "Response": [
         {
-
-          "Id": "1",
-          "Name": "401",
-          "accesstoken": "fc49d6ab821af01824adedb3391d45131cf631e4c1d4cb02fd69c40567b06775",
-          "checkin": "2023-05-16T06:34:56.473Z",
-          "checkout": "2023-05-17T06:34:56.473Z",
-          "occupied": "true",
-          "guestid": "3245343",
-          "devices": [
-            {
-              "id": "123",
-              "name": "dsd",
-              "token": "sdsdwsdsdsdsd",
-              "isonline": "true",
-              "lastconnceted": ""
-            },
-            {
-              "id": "123324",
-              "name": "dsd",
-              "token": "sdsdwsdsdsdsd",
-              "isonline": "false",
-              "lastconnceted": ""
-            }
-          ],
-          "notification": "2"
+            "id": "1",
+            "img": "assets/images/users/avatar-9.jpg",
+            "roomno": "400",
+            "accesstoken": "123",
+            "checkin": "2016-09-13T23:30:52.123Z",
+            "checkout": "null",
+            "occupied":"true",
+            "guestid": "321",
+            "devices":[
+                {
+                    "id":"1",
+                    "name":"IPhone",
+                    "accesstoken":"1200",
+                    "isonline":"true"
+                },
+                {
+                  "id":"2",
+                  "name":"Realme",
+                  "accesstoken":"1201",
+                  "isonline":"true"
+                }
+            ]
+    
         },
         {
-
-          "Id": "2",
-          "Name": "402",
-          "accesstoken": "fc49d6ab821af01824adedb3391d45131cf631e4c1d4cb02fd69c40567b06775",
-          "checkin": "2023-05-16T06:34:56.473Z",
-          "checkout": "2023-05-17T06:34:56.473Z",
-          "occupied": "true",
-          "guestid": "3245343",
-          "devices": [
-            {
-              "id": "123",
-              "name": "dsd",
-              "token": "sdsdwsdsdsdsd",
-              "isonline": "true",
-              "lastconnceted": ""
-            },
-            {
-              "id": "123324",
-              "name": "dsd",
-              "token": "sdsdwsdsdsdsd",
-              "isonline": "false",
-              "lastconnceted": ""
-            }
-          ],
-          "notification": "2"
-        },
-        {
-
-          "Id": "3",
-          "Name": "403",
-          "accesstoken": "fc49d6ab821af01824adedb3391d45131cf631e4c1d4cb02fd69c40567b06775",
-          "checkin": "2023-05-16T06:34:56.473Z",
-          "checkout": "2023-05-17T06:34:56.473Z",
-          "occupied": "true",
-          "guestid": "3245343",
-          "devices": [
-            {
-              "id": "123",
-              "name": "dsd",
-              "token": "sdsdwsdsdsdsd",
-              "isonline": "true",
-              "lastconnceted": ""
-            },
-            {
-              "id": "123324",
-              "name": "dsd",
-              "token": "sdsdwsdsdsdsd",
-              "isonline": "false",
-              "lastconnceted": ""
-            }
-          ],
-          "notification": "2"
-        }
-      ]
+          "id": "2",
+          "img": "assets/images/users/avatar-9.jpg",
+          "roomno": "401",
+          "accesstoken": "123",
+          "checkin": "2016-09-13T23:30:52.123Z",
+          "checkout": "null",
+          "occupied":"false",
+          "guestid": "321",
+          "devices":[
+              {
+                  "id":"1",
+                  "name":"IPhone",
+                  "accesstoken":"1200",
+                  "isonline":"true"
+              },
+              {
+                "id":"2",
+                "name":"Realme",
+                "accesstoken":"1201",
+                "isonline":"true"
+              }
+          ]
+  
+      }
+        
+    ]
     }
 
   ]

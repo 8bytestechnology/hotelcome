@@ -10,7 +10,7 @@
                     <div class="col-sm-4">
                         <div class="search-box">
                             <input type="text" class="form-control" id="searchMemberList"
-                                placeholder="Search for name or designation..." [(ngModel)]="service.searchTerm" />
+                                placeholder="Search for room number.." [(ngModel)]="service.searchTerm" />
                             <i class="ri-search-line search-icon"></i>
                         </div>
                     </div>
@@ -86,29 +86,26 @@
                         data-bs-toggle="offcanvas">
                         <h5 class="fs-17">{{data.name}}</h5>
                     </a>
-                    <p class="text-muted mb-4">{{data.atname}}</p>
-                    <div class="d-none member-contact">{{data.contact}}</div>
-                    <div class="d-none member-email">{{data.email}}</div>
-                    <span class="badge badge-soft-success member-designation">{{data.designation}}</span>
+                    <p class="text-muted mb-4">{{data.roomno}}</p>
+                    <div class="d-none member-guesid">{{data.guesid}}</div>
+                    <div class="d-none member-accesstoken">{{data.accesstoken}}</div>
+                    <span class="badge badge-soft-success member-designation">{{data.occupied}}</span>
                 </div>
-
-                <progressbar class="animated-progress progress-sm progress-label" [animate]="true"
-                    [value]="data.progressrate">
-                    <div class="label">{{data.progressrate}}%</div>
-                </progressbar>
 
                 <div class="row text-muted text-center mt-4">
                     <div class="col-4 border-end border-end-dashed">
-                        <h5 class="mb-1 projects-num">{{data.project}}</h5>
-                        <p class="text-muted mb-0">Projects</p>
+                        <p class="text-muted mb-0">Checkin</p>
+                         <p>{{ data.checkin | dateTimeAgo }}</p>
+
+
                     </div>
                     <div class="col-4 border-end border-end-dashed">
-                        <h5 class="mb-1 projects-num">{{data.overdue}}</h5>
-                        <p class="text-muted mb-0">Overdue</p>
+                        <p class="text-muted mb-0">Checkout</p>
+                        <h5 class="mb-1 projects-num">{{data.checkout}}</h5>
                     </div>
                     <div class="col-4">
-                        <h5 class="mb-1 tasks-num">{{data.task}}</h5>
-                        <p class="text-muted mb-0">Tasks</p>
+                        <p class="text-muted mb-0">Devices</p>
+                        <h5 class="mb-1 tasks-num">{{data.devices?data.devices.length:0}}</h5>
                     </div>
                 </div>
             </div>
@@ -128,235 +125,6 @@
 </div>
 <!-- end row -->
 
-<div class="row">
-    <div class="col-lg-12">
-        <h5 class="card-title mb-4">Basic Example</h5>
-    </div>
-</div>
-
-<div class="row row-cols-xxl-5 row-cols-lg-3 row-cols-md-2 row-cols-1">
-    <div class="col">
-        <div class="card">
-            <div class="card-body p-4 m-2">
-                <div class="row mb-4 pb-2">
-                    <div class="col">
-                        <div class="flex-shrink-0 me-2">
-                            <button type="button"
-                                class="btn btn-outline-danger custom-toggle rounded-circle btn-icon btn-sm"
-                                data-bs-toggle="button">
-                                <span class="icon-on"><i class="ri-heart-line fs-14"></i></span>
-                                <span class="icon-off"><i class="ri-heart-fill fs-14"></i></span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col text-end dropdown" dropdown>
-                        <a href="javascript:void(0);" dropdownToggle data-bs-toggle="dropdown" aria-expanded="false"> <i
-                                class="ri-more-fill fs-17"></i> </a>
-                        <ul class="dropdown-menu dropdown-menu-end" *dropdownMenu>
-                            <li>
-                                <a class="dropdown-item edit-list" href="#addmemberModal" data-bs-toggle="modal"
-                                    data-edit-id="12"><i
-                                        class="ri-pencil-line me-2 align-bottom text-muted"></i>Edit</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item remove-list" href="#removeMemberModal" data-bs-toggle="modal"
-                                    data-remove-id="12"><i
-                                        class="ri-delete-bin-5-line me-2 align-bottom text-muted"></i>Remove</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="text-center mb-4">
-                    <img src="assets/images/users/avatar-9.jpg" alt="" class="avatar-md rounded-3" />
-                </div>
-                <div class="text-center">
-                    <a href="#member-overview" data-bs-toggle="offcanvas">
-                        <h5 class="fs-17">Jordan Martino</h5>
-                    </a>
-                    <p class="text-muted mb-0">jordan.martino@hotelcom.com</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--end col-->
-    <div class="col">
-        <div class="card">
-            <div class="card-body p-4 m-2">
-                <div class="row mb-4 pb-2">
-                    <div class="col">
-                        <div class="flex-shrink-0 me-2">
-                            <button type="button"
-                                class="btn btn-outline-danger custom-toggle rounded-circle btn-icon btn-sm"
-                                data-bs-toggle="button">
-                                <span class="icon-on"><i class="ri-heart-line fs-14"></i></span>
-                                <span class="icon-off"><i class="ri-heart-fill fs-14"></i></span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col text-end dropdown" dropdown>
-                        <a href="javascript:void(0);" data-bs-toggle="dropdown" dropdownToggle aria-expanded="false"> <i
-                                class="ri-more-fill fs-17"></i> </a>
-                        <ul class="dropdown-menu dropdown-menu-end" *dropdownMenu>
-                            <li>
-                                <a class="dropdown-item edit-list" href="#addmemberModal" data-bs-toggle="modal"
-                                    data-edit-id="12"><i
-                                        class="ri-pencil-line me-2 align-bottom text-muted"></i>Edit</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item remove-list" href="#removeMemberModal" data-bs-toggle="modal"
-                                    data-remove-id="12"><i
-                                        class="ri-delete-bin-5-line me-2 align-bottom text-muted"></i>Remove</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="text-center mb-4">
-                    <img src="assets/images/users/avatar-10.jpg" alt="" class="avatar-md rounded-3" />
-                </div>
-                <div class="text-center">
-                    <a href="#member-overview" data-bs-toggle="offcanvas">
-                        <h5 class="fs-17">Nancy Martino</h5>
-                    </a>
-                    <p class="text-muted mb-0">nancy.martino@hotelcom.com</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--end col-->
-    <div class="col">
-        <div class="card">
-            <div class="card-body p-4 m-2">
-                <div class="row mb-4 pb-2">
-                    <div class="col">
-                        <div class="flex-shrink-0 me-2">
-                            <button type="button"
-                                class="btn btn-outline-danger custom-toggle rounded-circle btn-icon btn-sm"
-                                data-bs-toggle="button">
-                                <span class="icon-on"><i class="ri-heart-line fs-14"></i></span>
-                                <span class="icon-off"><i class="ri-heart-fill fs-14"></i></span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col text-end dropdown" dropdown>
-                        <a href="javascript:void(0);" data-bs-toggle="dropdown" dropdownToggle aria-expanded="false"> <i
-                                class="ri-more-fill fs-17"></i> </a>
-                        <ul class="dropdown-menu dropdown-menu-end" *dropdownMenu>
-                            <li>
-                                <a class="dropdown-item edit-list" href="#addmemberModal" data-bs-toggle="modal"
-                                    data-edit-id="12"><i
-                                        class="ri-pencil-line me-2 align-bottom text-muted"></i>Edit</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item remove-list" href="#removeMemberModal" data-bs-toggle="modal"
-                                    data-remove-id="12"><i
-                                        class="ri-delete-bin-5-line me-2 align-bottom text-muted"></i>Remove</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="text-center mb-4">
-                    <img src="assets/images/users/avatar-1.jpg" alt="" class="avatar-md rounded-3" />
-                </div>
-                <div class="text-center">
-                    <a href="#member-overview" data-bs-toggle="offcanvas">
-                        <h5 class="fs-17">Pieter Novitsky</h5>
-                    </a>
-                    <p class="text-muted mb-0">pieter.novitsky@hotelcom.com</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--end col-->
-    <div class="col">
-        <div class="card">
-            <div class="card-body p-4 m-2">
-                <div class="row mb-4 pb-2">
-                    <div class="col">
-                        <div class="flex-shrink-0 me-2">
-                            <button type="button"
-                                class="btn btn-outline-danger custom-toggle rounded-circle btn-icon btn-sm active"
-                                data-bs-toggle="button">
-                                <span class="icon-on"><i class="ri-heart-line fs-14"></i></span>
-                                <span class="icon-off"><i class="ri-heart-fill fs-14"></i></span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col text-end dropdown" dropdown>
-                        <a href="javascript:void(0);" dropdownToggle data-bs-toggle="dropdown" aria-expanded="false"> <i
-                                class="ri-more-fill fs-17"></i> </a>
-                        <ul class="dropdown-menu dropdown-menu-end" *dropdownMenu>
-                            <li>
-                                <a class="dropdown-item edit-list" href="#addmemberModal" data-bs-toggle="modal"
-                                    data-edit-id="12"><i
-                                        class="ri-pencil-line me-2 align-bottom text-muted"></i>Edit</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item remove-list" href="#removeMemberModal" data-bs-toggle="modal"
-                                    data-remove-id="12"><i
-                                        class="ri-delete-bin-5-line me-2 align-bottom text-muted"></i>Remove</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="text-center mb-4">
-                    <img src="assets/images/users/avatar-2.jpg" alt="" class="avatar-md rounded-3" />
-                </div>
-                <div class="text-center">
-                    <a href="#member-overview" data-bs-toggle="offcanvas">
-                        <h5 class="fs-17">Allyson Booker</h5>
-                    </a>
-                    <p class="text-muted mb-0">allyson.booker@hotelcom.com</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--end col-->
-    <div class="col">
-        <div class="card">
-            <div class="card-body p-4 m-2">
-                <div class="row mb-4 pb-2">
-                    <div class="col">
-                        <div class="flex-shrink-0 me-2">
-                            <button type="button"
-                                class="btn btn-outline-danger custom-toggle rounded-circle btn-icon btn-sm"
-                                data-bs-toggle="button">
-                                <span class="icon-on"><i class="ri-heart-line fs-14"></i></span>
-                                <span class="icon-off"><i class="ri-heart-fill fs-14"></i></span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col text-end dropdown" dropdown>
-                        <a href="javascript:void(0);" dropdownToggle data-bs-toggle="dropdown" aria-expanded="false"> <i
-                                class="ri-more-fill fs-17"></i> </a>
-                        <ul class="dropdown-menu dropdown-menu-end" *dropdownMenu>
-                            <li>
-                                <a class="dropdown-item edit-list" href="#addmemberModal" data-bs-toggle="modal"
-                                    data-edit-id="12"><i
-                                        class="ri-pencil-line me-2 align-bottom text-muted"></i>Edit</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item remove-list" href="#removeMemberModal" data-bs-toggle="modal"
-                                    data-remove-id="12"><i
-                                        class="ri-delete-bin-5-line me-2 align-bottom text-muted"></i>Remove</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="text-center mb-4">
-                    <img src="assets/images/users/avatar-3.jpg" alt="#" class="avatar-md rounded-3" />
-                </div>
-                <div class="text-center">
-                    <a href="#member-overview" data-bs-toggle="offcanvas">
-                        <h5 class="fs-17">Cristofer Leblanc</h5>
-                    </a>
-                    <p class="text-muted mb-0">cristofer.leblanc@hotelcom.com</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--end col-->
-</div>
-<!--end row-->
 
 <!-- Modal -->
 <div bsModal #addmemberModal="bs-modal" class="modal fade" id="addmemberModal" tabindex="-1" aria-hidden="true">
@@ -397,17 +165,17 @@
                                 </div>
                             </div>
                             <div class="mb-3 mt-4">
-                                <label for="teammembersName" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="teammembersName" placeholder="Enter name"
-                                    formControlName="name" required />
-                                <div class="invalid-feedback">Please Enter a member name.</div>
+                                <label for="teammembersRoomno" class="form-label">Roomno</label>
+                                <input type="text" class="form-control" id="teammembersRoomno" placeholder="Enter room number"
+                                    formControlName="roomno" required />
+                                <div class="invalid-feedback">Please Enter a member room number.</div>
                             </div>
 
                             <div class="mb-4">
-                                <label for="designation" class="form-label">Designation</label>
-                                <input type="text" class="form-control" id="designation" placeholder="Enter designation"
-                                formControlName="designation" required />
-                                <div class="invalid-feedback">Please Enter a designation.</div>
+                                <label for="occupied" class="form-label">Occupied</label>
+                                <input type="text" class="form-control" id="occupied" placeholder="Enter status"
+                                formControlName="occupied" required />
+                                <div class="invalid-feedback">Please Enter a status.</div>
                             </div>
 
                             <div class="hstack gap-2 justify-content-end">
@@ -471,8 +239,7 @@
         <div class="p-3 text-center">
             <img src="{{teammember.img}}" alt="" class="avatar-lg img-thumbnail rounded-4 mx-auto profile-img" />
             <div class="mt-3">
-                <h5 class="fs-15 profile-name">{{teammember.name}}</h5>
-                <p class="text-muted profile-designation">{{teammember.designation}}</p>
+                <h5 class="fs-15 profile-name">{{teammember.roomno}}</h5>
             </div>
             <div class="hstack gap-2 justify-content-center mt-4">
                 <div class="avatar-xs">
@@ -500,15 +267,15 @@
         <div class="row g-0 text-center bg-light">
             <div class="col-6">
                 <div class="p-3 border border-dashed border-start-0">
-                    <h5 class="mb-1 profile-project">{{teammember.project}}</h5>
-                    <p class="text-muted mb-0">Projects</p>
+                    <h5 class="mb-1 profile-project">{{teammember.checkin}}</h5>
+                    <p class="text-muted mb-0">Checkin</p>
                 </div>
             </div>
             <!--end col-->
             <div class="col-6">
                 <div class="p-3 border border-dashed border-start-0">
-                    <h5 class="mb-1 profile-task">{{teammember.task}}</h5>
-                    <p class="text-muted mb-0">Tasks</p>
+                    <h5 class="mb-1 profile-task">{{teammember.checkout}}</h5>
+                    <p class="text-muted mb-0">Checkout</p>
                 </div>
             </div>
             <!--end col-->
