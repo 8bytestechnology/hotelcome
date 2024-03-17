@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/adjacent-overload-signatures */
 import {Injectable, PipeTransform} from '@angular/core';
+import{HttpClient} from '@angular/common/http';
 import {BehaviorSubject, Observable, of, Subject} from 'rxjs';
 
 // Date Format
@@ -9,7 +10,9 @@ import {DatePipe} from '@angular/common';
 import {RoomModel} from './room.model';
 import { roomList } from './data';
 import {DecimalPipe} from '@angular/common';
-import {debounceTime, delay, switchMap, tap} from 'rxjs/operators';
+import {debounceTime, delay, map, switchMap, tap} from 'rxjs/operators';
+import { GlobalComponent as GC } from "../../global-component";
+
 
 interface SearchResult {
   countries: RoomModel[];
@@ -50,6 +53,10 @@ function sort(countries: RoomModel[]): RoomModel[] {
 
 @Injectable({providedIn: 'root'})
 export class RoomService {
+  get() {
+    throw new Error('Method not implemented.');
+  }
+
   private _loading$ = new BehaviorSubject<boolean>(true);
   private _search$ = new Subject<void>();
   private _countries$ = new BehaviorSubject<RoomModel[]>([]);
@@ -69,6 +76,7 @@ export class RoomService {
     payment: '',
     date: '',
   };
+  http: any;
 
   constructor(private pipe: DecimalPipe, private datePipe: DatePipe) {
     this._search$.pipe(
@@ -139,5 +147,8 @@ export class RoomService {
     return of({countries, total});
   }
 
+  getRoomDetails():Observable<any> {
+    return this.http.get(GC.API_URL + '/room/').pipe(map(res => res));
+  }
 
 }

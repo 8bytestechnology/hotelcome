@@ -42,9 +42,9 @@ export class RoomComponent {
 someDate: any;
 
   constructor(private formBuilder: UntypedFormBuilder,
-    public service: RoomService) {
-    this.teamdata = service.countries$;
-    this.total = service.total$;
+    private roomservice: RoomService) {
+    this.teamdata = roomservice.countries$;
+    this.total = roomservice.total$;
   }
 
 
@@ -77,8 +77,10 @@ someDate: any;
     }, 1200)
 
     // Fetch Data
-    this.teamlists = roomList
-
+    // this.teamlists = roomList
+    this.roomservice.getRoomDetails().subscribe(response => {
+      this.teamlists = response;
+    });
   }
 
   // handleCheckout(): void {
@@ -146,7 +148,7 @@ someDate: any;
   saveMember() {
     if (this.memberForm.valid) {
       if (this.memberForm.get('id')?.value) {
-        this.service.products = roomList.map((order: { id: any; }) => order.id === this.memberForm.get('id')?.value ? { ...order, ...this.memberForm.value } : order);
+        this.roomservice.products = roomList.map((order: { id: any; }) => order.id === this.memberForm.get('id')?.value ? { ...order, ...this.memberForm.value } : order);
       }
 
       else {

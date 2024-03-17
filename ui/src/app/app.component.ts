@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RoomService } from './pages/rooms/room.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hotelcom';
+  constructor(private rooms:RoomService){}
+  
 }
